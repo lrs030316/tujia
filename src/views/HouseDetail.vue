@@ -1,11 +1,12 @@
 <template>
-  <router-view></router-view>
+  <h2>zz</h2>
 </template>
 
-<script lang="ts">
+<script lang="st">
 import { defineComponent } from 'vue'
-
 export default defineComponent ({
-  name: 'App'
+
 })
 </script>
+
+<style lang='less'></style>

@@ -1,0 +1,47 @@
+.concent {
+  position: absolute;
+  top: 46px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  background: #ccc;
+  padding-top: 10px;
+}
+.newsbox {
+  padding: 0 15px;
+  background: #fff;
+}
+.newsbox li {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.newsbox .line {
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+}
+.newsbox .conbox {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.newsbox .conbox .spanone {
+  font-size: 16px;
+}
+.newsbox .conbox .spantwo {
+  font-size: 12px;
+}
+.nothing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nothing div {
+  margin-top: 20px;
+  font-size: 14px;
+}
