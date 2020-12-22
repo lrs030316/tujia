@@ -2,11 +2,21 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 
 
-const router =[
+const routes =[
   { 
     path: '/',
-    component:() => import('../views/Home.vue')
-     
+    component:() => import('../views/Home.vue'),
+    children: [
+      {
+        path: "/",
+        redirect: "/index"
+      },
+      {
+        path: "/index",
+        component: () => import("../Home/Index.vue"),
+        meta: { requieAlive: true }
+      }
+    ]
   },
   { path: '/acessalbum',
     component:() => import('../views/AcessAlbum.vue')
@@ -23,22 +33,25 @@ const router =[
   { path: '/photograph',
     component:() => import('../views/Photograph.vue')
   },
+  { path: '/:catchAll(.*)',
+    component:() => import('../views/Photograph.vue')
+  }
 ]
 
 const router = createRouter({
 
-  history:createWebHashHistory(),
+  history: createWebHashHistory(),
   routes,
 })
 
-router.beforeEach(async (to,form) =>{
-  return await fn()
-})
+// router.beforeEach(async (to,form) =>{
+//   return await fn()
+// })
 
-function fn() {
-  setTimeout(() => {
-    return false
-  },1000)
-}
+// function fn() {
+//   setTimeout(() => {
+//     return false
+//   },1000)
+// }
 
 export default router

@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6683416",
+      "name": "发现",
+      "font_class": "faxian",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "9473046",
+      "name": "我 的",
+      "font_class": "wodedangxuan",
+      "unicode": "e50a",
+      "unicode_decimal": 58634
+    },
+    {
+      "icon_id": "9749610",
+      "name": "首页-选中",
+      "font_class": "yemian",
+      "unicode": "e502",
+      "unicode_decimal": 58626
+    },
+    {
+      "icon_id": "11968339",
+      "name": "消息 文件",
+      "font_class": "icon-test",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "14166231",
+      "name": "收 藏 ",
+      "font_class": "shoucang",
+      "unicode": "e99d",
+      "unicode_decimal": 59805
+    }
+  ]
+}
