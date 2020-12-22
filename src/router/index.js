@@ -5,16 +5,24 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const router =[
   { 
     path: '/',
-    component:() => import('../components/Index.vue') 
+    component:() => import('../views/Home.vue')
+     
   },
-  { path: '/about',
-  component:() => import('../components/About.vue') 
+  { path: '/acessalbum',
+    component:() => import('../views/AcessAlbum.vue')
   },
-  {
-    path:'/detail/:id',
-    component:() => import('../components/About.vue'),
-    props:true
-  }
+  { path: '/findditail',
+    component:() => import('../views/FindDitail.vue')
+  },
+  { path: '/houseditail',
+    component:() => import('../views/HouseDitail.vue')
+  },
+  { path: '/mouse',
+    component:() => import('../views/Mouse.vue')
+  },
+  { path: '/photograph',
+    component:() => import('../views/Photograph.vue')
+  },
 ]
 
 const router = createRouter({
