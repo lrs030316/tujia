@@ -12,3 +12,4 @@ const app = createApp(App);
 app.use(router);
 app.use(store, key)
 app.mount('#app');
+
