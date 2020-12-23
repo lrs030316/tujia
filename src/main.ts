@@ -3,7 +3,8 @@ import App from './App.vue'
 import './index.css'
 import "amfe-flexible"
 import 'vant/lib/index.css'
-import '.././public/iconfont/iconfont.css'
+import '../public/iconfont/iconfont.css'
+import './assets/css/style.css'
 import router from './router/index'
 import store from './store/index'
 
