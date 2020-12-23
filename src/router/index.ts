@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
+<<<<<<< HEAD
 const routes =[
   { 
     path: '/',
@@ -33,15 +34,35 @@ const routes =[
   },
   { path: '/:catchAll(.*)',
     component:() => import('../views/Photograph.vue')
+=======
+const routes = [
+  {
+    path: '/',
+    component: () => import('../views/Index.vue'),
+    redirect: '/index'
+  },
+  {
+    path: '/news',
+    component: () => import('../views/News.vue')
+  },
+  {
+    path: '/houseDetail',
+    name: 'houseDetail',
+    component: () => import('../views/HouseDetail.vue')
+>>>>>>> zz
   }
 ]
 
 const router = createRouter({
+<<<<<<< HEAD
 
+=======
+>>>>>>> zz
   history: createWebHashHistory(),
   routes,
 })
 
+<<<<<<< HEAD
 // router.beforeEach(async (to,form) =>{
 //   return await fn()
 // })
@@ -53,3 +74,6 @@ const router = createRouter({
 // }
 
 export default router
+=======
+export default router;
+>>>>>>> zz
