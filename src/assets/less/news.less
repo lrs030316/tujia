@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .concent {
   position: absolute;
   top: 46px;
@@ -17,11 +22,11 @@
     display: flex;
     align-items: center;
   }
-  .line {
-    height: 1px;
-    width: 100%;
-    background: #ccc;
-  }
+  // .line {
+  //   height: 1px;
+  //   width: 100%;
+  //   background: #ccc;
+  // }
   .conbox {
     display: flex;
     flex-direction: column;
@@ -36,16 +41,16 @@
 }
 
 // 无聊天时显示图标
-.nothing {
+.custom-image {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  div {
-    margin-top: 20px;
-    font-size: 14px;
+  .van-empty__image {
+    width: 90px;
+    height: 90px;
+  }
+  .van-empty__description {
+    padding: 0;
   }
 }

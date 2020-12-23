@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .concent {
   position: absolute;
   top: 46px;
@@ -16,11 +20,6 @@
   display: flex;
   align-items: center;
 }
-.newsbox .line {
-  height: 1px;
-  width: 100%;
-  background: #ccc;
-}
 .newsbox .conbox {
   display: flex;
   flex-direction: column;
@@ -32,16 +31,16 @@
 .newsbox .conbox .spantwo {
   font-size: 12px;
 }
-.nothing {
+.custom-image {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-.nothing div {
-  margin-top: 20px;
-  font-size: 14px;
+.custom-image .van-empty__image {
+  width: 90px;
+  height: 90px;
+}
+.custom-image .van-empty__description {
+  padding: 0;
 }

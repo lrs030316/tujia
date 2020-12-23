@@ -22,7 +22,8 @@
           <span class="spantwo">暂无系统通知</span>
         </div>
       </li>
-      <div class="line"></div>
+      <!-- <div class="line"></div> -->
+      <van-divider />
       <li>
         <van-image
           width="40"
@@ -38,14 +39,11 @@
     </ul>
 
     <!-- 无聊天时显示图标 -->
-    <div class="nothing">
-      <van-image
-        width="40"
-        height="40"
-        src="https://img.yzcdn.cn/vant/cat.jpeg"
-      />
-      <div>暂无聊天消息</div>
-    </div>
+    <van-empty
+      class="custom-image"
+      image="https://img.yzcdn.cn/vant/custom-empty-image.png"
+      description="暂无聊天消息"
+    />
     
   </div>
 
@@ -59,5 +57,5 @@ export default defineComponent ({
 </script>
 
 <style lang="less">
-  @import '../assets/css/news.less';
+  @import '../assets/less/news.less';
 </style>
