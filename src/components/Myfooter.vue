@@ -31,7 +31,7 @@ export default {
         {
           title: "收藏",
           icon: "shoucang",
-          to: "/classify",
+          to: "/collect",
           dot: false
         },
         {
@@ -43,7 +43,7 @@ export default {
         {
           title: "消息",
           icon: "icon-test",
-          to: "/mine",
+          to: "/news",
           dot: false
         },
         {

@@ -13,6 +13,26 @@ const routes =[
         path: "/index",
         component: () => import("../Home/Index.vue"),
         meta: { requieAlive: true }
+      },
+      {
+        path: "/collect",
+        component: () => import("../views/Collect.vue"),
+        meta: { requieAlive: true }
+      },
+      {
+        path: "/cart",
+        component: () => import("../views/Cart.vue"),
+        meta: { requieAlive: true }
+      },
+      {
+        path: "/news",
+        component: () => import("../views/News.vue"),
+        meta: { requieAlive: true }
+      },
+      {
+        path: "/mine",
+        component: () => import("../views/Mine.vue"),
+        meta: { requieAlive: true }
       }
     ]
   },
@@ -22,8 +42,8 @@ const routes =[
   { path: '/findditail',
     component:() => import('../views/FindDitail.vue')
   },
-  { path: '/houseditail',
-    component:() => import('../views/HouseDitail.vue')
+  { path: '/housedetail',
+    component:() => import('../views/HouseDetail.vue')
   },
   { path: '/mouse',
     component:() => import('../views/Mouse.vue')
