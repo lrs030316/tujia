@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <router-view></router-view>
     <my-footer></my-footer>
 </template>
@@ -20,3 +21,17 @@ export default {
 <style lang="less" scoped>
   
 </style>
+=======
+  <div class="home"></div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'Home',
+  components: {
+  },
+});
+</script>
+>>>>>>> zhouchunying
