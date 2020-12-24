@@ -9,11 +9,7 @@
     "amfe-flexible": "^2.2.1",
     "vant": "^3.0.0-rc.4",
     "vue": "^3.0.4",
-<<<<<<< HEAD
     "vuex": "^4.0.0-rc.2"
-=======
-    "vue-router": "^4.0.1"
->>>>>>> zz
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.4",
