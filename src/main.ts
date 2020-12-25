@@ -6,6 +6,7 @@ import "amfe-flexible"
 import 'vant/lib/index.css'
 import '../public/iconfont/iconfont.css'
 import './assets/css/style.css'
+import './assets/xypiconfont/iconfont.css'
 import router from './router/index'
 import store from './store/index'
 
