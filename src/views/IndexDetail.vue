@@ -1,32 +1,6 @@
 <template>
   <div class="all">
-    <header>
-      <span class="iconfont icon-houtui" @click="back"></span>
-      <div class="put">
-        <div class="put-left">
-          <div class="location">
-            {{ loca }}
-          </div>
-          <div class="time">
-            <div>
-              <span class="enter-leave">住</span>
-              <span class="date">12.08</span>
-            </div>
-            <div>
-              <span class="enter-leave">离</span>
-              <span class="date">12.09</span>
-            </div>
-          </div>
-        </div>
-        <input
-          type="text"
-          class="put-right"
-          placeholder="搜索北京的景点、地标、房源"
-        />
-      </div>
-      <img src="../assets/img/ico-map.png" alt="" />
-      <span class="text">地图</span>
-    </header>
+    <index-header />
     <ul class="list">
       <li
         v-for="(item, index) in list"
@@ -72,13 +46,11 @@
 </template>
 
 <script>
-import { ref } from "vue";
-import { reactive } from "vue";
-import { useRouter } from "vue-router";
+import { ref, reactive } from "vue";
+import indexHeader from '../components/IndexHeader.vue';
 
 export default {
   setup() {
-    const loca = ref("北京");
     const list = reactive(["价格 / 钻级", "推荐排序", "位置", "筛选"]);
     const actionList = reactive([
       "双旦狂欢",
@@ -95,13 +67,11 @@ export default {
     const changeAction = (i) => {
       number.value = i;
     };
-
-    const router = useRouter();
-    const back = () => {
-      router.push("/index");
-    };
-    return { back, loca, list, change, num, actionList, number, changeAction };
+    return { list, change, num, actionList, number, changeAction };
   },
+  components: {
+    indexHeader
+  }
 };
 </script>
 <style lang="less" scoped>

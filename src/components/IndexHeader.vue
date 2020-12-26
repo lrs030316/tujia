@@ -30,10 +30,16 @@
 
 <script>
 import { ref } from 'vue';
+import { useRouter } from "vue-router";
+
 export default {
   setup() {
     const loca = ref("北京");
-    return { loca };
+    const router = useRouter();
+    const back = () => {
+      router.push("/index");
+    };
+    return { loca, back };
   }
 };
 </script>
