@@ -4,10 +4,10 @@
        <div class="table-menu">
           <div class="table item-1">国内.港澳台</div>
           <div class="table ">海外 </div>
-          <div class="table item-2"><i><img src="../../public/syimg/sy1.png" alt=""></i> 特价</div>
+          <div class="table item-2"><i><img src="../../syimg/sy1.png" alt=""></i> 特价</div>
       </div>
       <div class="locate">
-        <p>北京</p> <div class="locate-g"><p>当前位置</p><img src="../../public/syimg/sy2.png" alt=""></div>
+        <p>北京</p> <div class="locate-g"><p>当前位置</p><img src="../../syimg/sy2.png" alt=""></div>
       </div>
       <div class="wrapp">
       <div class="date">
@@ -18,7 +18,7 @@
       <p class="search"><span>后海/南铜锣巷地区</span><span>三里屯</span><span>故宫</span><span>海淀区</span></p>
       <div class="search-button">开始搜索</div>
       </div>
-      <div class="serves"><i><img src="../../public/syimg/sy3.png" alt=""></i><p>信用住.先住后付</p><i><img src="../../public/syimg/fy.png" alt=""></i><p>24小时客服</p><i><img src="../../public/syimg/kf.png" alt=""></i><p>房源房东真实认证</p></div>
+      <div class="serves"><i><img src="../../syimg/sy3.png" alt=""></i><p>信用住.先住后付</p><i><img src="../../syimg/fy.png" alt=""></i><p>24小时客服</p><i><img src="../../syimg/kf.png" alt=""></i><p>房源房东真实认证</p></div>
       <div class="stage">全国旅游投诉平台:www.12301.cn</div>
   </div>
 </div>

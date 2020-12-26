@@ -7,27 +7,27 @@
        <span class="day count">天天特惠</span>
        <span class="reserve house">特惠房源抢先订</span>
        <span class="discount pre">6折起</span>
-       <img src="../../public/syimg/ds1.png" alt="">
+       <img src="../../syimg/ds1.png" alt="">
        </div>
      <div class="ds-2">
        <i class="ds-2-1">
           <span class="day down">新手立减</span>
           <span class="reserve newp">新手专属特惠房源</span>
           <span class="discount fto">6折起</span>
-         <img src="../../public/syimg/ds2.png" alt=""></i>
+         <img src="../../syimg/ds2.png" alt=""></i>
        <i class="ds-2-2">
           
         <div class="ds-2-2-1 disdance">
            <span class="day ">今日甩卖</span>
            <span class="reserve ">预定今晚</span>
            <span class="discount ">6折起</span>
-           <img src="../../public/syimg/ds3.png" alt="">
+           <img src="../../syimg/ds3.png" alt="">
         </div>
         <div class="ds-2-2-1">
            <span class="day">新房特惠</span>
            <span class="reserve">抢先体验</span>
            <span class="discount">6折起</span>
-           <img src="../../public/syimg/ds4.png" alt="">
+           <img src="../../syimg/ds4.png" alt="">
          </div>
        </i>
     </div>

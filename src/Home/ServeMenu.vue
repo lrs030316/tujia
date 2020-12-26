@@ -1,7 +1,7 @@
 <template>
   <div class="serve-menu">
       <div class="member">
-        <i><img src="../../public/syimg/mm1.png" alt=""></i>
+        <i><img src="../../syimg/mm1.png" alt=""></i>
         <p>周三会员日，99元全国随心住</p>
         <div class="coupon">立即抢</div>
       </div>
@@ -25,43 +25,43 @@ export default {
    return {
      title:[
        {
-         imgUrl:"../../public/syimg/mn1.png",
+         imgUrl:"../../syimg/mn1.png",
          nam:"天天特惠"
        },
        {
-         imgUrl:"../../public/syimg/mn2.png",
+         imgUrl:"../../syimg/mn2.png",
          nam:"会员日"
        },
        {
-         imgUrl:"../../public/syimg/mn3.png",
+         imgUrl:"../../syimg/mn3.png",
          nam:"超值好房"
        },
        {
-         imgUrl:"../../public/syimg/mn4.png",
+         imgUrl:"../../syimg/mn4.png",
          nam:"每周上新"
        },
        {
-         imgUrl:"../../public/syimg/mn5.png",
+         imgUrl:"../../syimg/mn5.png",
          nam:"实拍美屋"
        },
        {
-         imgUrl:"../../public/syimg/mn6.png",
+         imgUrl:"../../syimg/mn6.png",
          nam:"新奇体验"
        },
        {
-        imgUrl:"../../public/syimg/mn7.png",
+        imgUrl:"../../syimg/mn7.png",
          nam:"品牌民宿"
        },
        {
-         imgUrl:"../../public/syimg/mn8.png",
+         imgUrl:"../../syimg/mn8.png",
          nam:"精挑细选"
        },
        {
-         imgUrl:"../../public/syimg/mn9.png", 
+         imgUrl:"../../syimg/mn9.png", 
          nam:"浪漫约会"
        },
        {
-         imgUrl:"../../public/syimg/mn10.png",
+         imgUrl:"../../syimg/mn10.png",
          nam:"整套出租"
        }
      ]

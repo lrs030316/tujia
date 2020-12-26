@@ -25,7 +25,7 @@ export default {
     indicatorColor: String,
     swiperList: Array
   },
- data() {
+ data() { 
    return {
      
      swiperList: [
