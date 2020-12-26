@@ -6,10 +6,13 @@ import "amfe-flexible"
 import 'vant/lib/index.css'
 import '../public/iconfont/iconfont.css'
 import './assets/css/style.css'
+// import './assets/css/mine.css'
+import './assets/image/minefont/iconfont.css'
 import router from './router/index'
 import store from './store/index'
 
 import {
+  Button,
   NavBar,
   Empty,
   Swipe,
@@ -28,8 +31,8 @@ import {
   TabbarItem
 } from "vant";
 
-import {  } from 'vant';
 const app = createApp(App)
+app.use(Button)
 app.use(NavBar)
 app.use(Empty)
 app.use(Swipe)
