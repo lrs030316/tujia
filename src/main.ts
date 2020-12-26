@@ -25,7 +25,12 @@ import {
   Tag,
   Search,
   Tabbar,
-  TabbarItem
+  TabbarItem,
+  DropdownMenu, 
+  DropdownItem,
+  Calendar,
+  Card,
+  Button,
 } from "vant";
 
 import {  } from 'vant';
@@ -48,4 +53,9 @@ app.use(Tabbar)
 app.use(TabbarItem)
 app.use(router)
 app.use(store)
+app.use(DropdownMenu);
+app.use(DropdownItem);
+app.use(Calendar);
+app.use(Card);
+app.use(Button);
 app.mount('#app')
