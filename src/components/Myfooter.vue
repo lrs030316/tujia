@@ -31,7 +31,7 @@ export default {
         {
           title: "收藏",
           icon: "shoucang",
-          to: "/collect",
+          to: "/house",
           dot: false
         },
         {

@@ -29,7 +29,11 @@ import {
   Tag,
   Search,
   Tabbar,
-  TabbarItem
+  TabbarItem,
+  DropdownMenu, 
+  DropdownItem,
+  Calendar,
+  Card
 } from "vant";
 
 const app = createApp(App)
@@ -52,4 +56,8 @@ app.use(Tabbar)
 app.use(TabbarItem)
 app.use(router)
 app.use(store)
+app.use(DropdownMenu)
+app.use(DropdownItem)
+app.use(Calendar)
+app.use(Card)
 app.mount('#app')
