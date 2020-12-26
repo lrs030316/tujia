@@ -22,7 +22,7 @@ const routes =[
       {
         path: "/cart",
         component: () => import("../views/Cart.vue"),
-        meta: { requieAlive: true }
+        meta: { requieAlive: true }      
       },
       {
         path: "/news",
