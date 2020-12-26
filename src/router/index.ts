@@ -19,7 +19,7 @@ const routes =[
         component: () => import("../views/Collect.vue"),
         meta: { requieAlive: true }
       },
-      {
+      { 
         path: "/cart",
         component: () => import("../views/Cart.vue"),
         meta: { requieAlive: true }      
@@ -50,6 +50,10 @@ const routes =[
   },
   { path: '/photograph',
     component:() => import('../views/Photograph.vue')
+  },
+  {
+    path: '/indexdetail',
+    component: () => import('../views/IndexDetail.vue')
   },
   { path: '/:catchAll(.*)',
     component:() => import('../views/Photograph.vue')

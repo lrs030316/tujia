@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "579808",
+      "name": "后退",
+      "font_class": "houtui",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "755615",
+      "name": "直角三角形",
+      "font_class": "zhijiao-triangle",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "13569997",
+      "name": "下拉",
+      "font_class": "xiala",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    }
+  ]
+}
