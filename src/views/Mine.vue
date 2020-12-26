@@ -21,11 +21,15 @@
         <i class="iconfont icon-arrow-right"></i>
       </div>
 
-      <div class=""></div>
+      <div class="bj">
+        <img src="../assets/image/mineimg/bj.png" alt="">
+      </div>
+
+      <div class="tx">
+        <img src="../assets/image/mineimg/tx.png" alt="">
+      </div>
       
     </div>
-    
-    
     
    
    <div class="lbt"></div>
@@ -54,14 +58,14 @@ export default {
   position: relative;
   img{
     width: 100%;
-    height: 100%;
+    height: 75%;
   }
 }
 .nc {
   width: 319px;
   height: 20px;
   position: absolute;
-  top: 42px;
+  top: 46px;
   padding: 0 28px;
   display: flex;
   justify-content: space-between;
@@ -120,6 +124,39 @@ export default {
     font-size: 4px;
   }
 }
+
+.bj {
+  width: 50px;
+  height: 50px;
+  background: #6B7075;
+  border-radius: 50%;
+  box-shadow:0 0 10px 5px rgba(0, 0, 0,0.3);
+  position: absolute;
+  top: 86px;
+  right: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 28px;
+    height: 28px;
+  }
+}
+.tx {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  box-shadow:0 0 20px 5px rgba(0, 0, 0,0.3);
+  position: absolute;
+  top: 127px;
+  left: 19px;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+
 
 .lbt {
   width: 100%;
