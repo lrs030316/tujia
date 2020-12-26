@@ -18,7 +18,7 @@
 <script>
 import AdderssMenu from './AdderssMenu.vue'
 import ServeMenu from './ServeMenu.vue'
-import ProDuct from '../components/ProDuct.vue';
+import ProDuct from '../components/ProDuct.vue'
 export default {
    props: {
     autoplay: Number,

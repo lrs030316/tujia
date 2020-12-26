@@ -48,7 +48,6 @@ export default {
   background: #fff;
   .mate {
     width: 84px;
-    height: 20px;
     font-size: 21px;
     font-family: PingFang SC;
     font-weight: bold;
@@ -57,7 +56,6 @@ export default {
 
   }
   .sm-mate {
-    height: 11px;
     font-size: 11px;
     font-family: PingFang SC;
     font-weight: 500;
