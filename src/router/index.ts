@@ -56,12 +56,7 @@ const routes =[
           }
         ]
       },
-<<<<<<< HEAD
       { 
-=======
-      
-      {
->>>>>>> lrs
         path: "/cart",
         component: () => import("../views/Cart.vue"),
         meta: { requieAlive: true }      
@@ -78,7 +73,6 @@ const routes =[
       }
     ]
   },
-<<<<<<< HEAD
   { path: '/acessalbum',
     component:() => import('../views/AcessAlbum.vue')
   },
@@ -98,23 +92,6 @@ const routes =[
     path: '/indexdetail',
     component: () => import('../views/IndexDetail.vue')
   },
-=======
-  // { path: '/acessalbum',
-  //   component:() => import('../views/AcessAlbum.vue')
-  // },
-  // { path: '/findditail',
-  //   component:() => import('../views/FindDitail.vue')
-  // },
-  // { path: '/housedetail',
-  //   component:() => import('../views/HouseDetail.vue')
-  // },
-  // { path: '/mouse',
-  //   component:() => import('../views/Mouse.vue')
-  // },
-  // { path: '/photograph',
-  //   component:() => import('../views/Photograph.vue')
-  // },
->>>>>>> lrs
   { path: '/:catchAll(.*)',
     component:() => import('../views/Photograph.vue')
   }

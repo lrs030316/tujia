@@ -19,7 +19,7 @@
       <div class="search-button">开始搜索</div>
       </div>
       <div class="serves"><i><img src="../../public/syimg/sy3.png" alt=""></i><p>信用住.先住后付</p><i><img src="../../public/syimg/fy.png" alt=""></i><p>24小时客服</p><i><img src="../../public/syimg/kf.png" alt=""></i><p>房源房东真实认证</p></div>
-      <div class="stage">全国旅游投诉平台:www.12301.cn</span>
+      <div class="stage">全国旅游投诉平台:www.12301.cn</div>
   </div>
 </div>
 </template>
