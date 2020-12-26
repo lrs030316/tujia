@@ -21,11 +21,29 @@
         <i class="iconfont icon-arrow-right"></i>
       </div>
 
-      <div class=""></div>
+      <div class="bj">
+        <img src="../assets/image/mineimg/bj.png" alt="">
+      </div>
+
+      <div class="tx">
+        <img src="../assets/image/mineimg/tx.png" alt="">
+      </div>
       
+      <ul class="hb">
+        <li>
+          <a href="">红包</a>
+          <span>0个</span>
+        </li>
+        <li>
+          <a href="">积分商城</a>
+          <span>0分</span>
+        </li>
+        <li>
+          <a href="">余额</a>
+          <span>￥0</span>
+        </li>
+      </ul>
     </div>
-    
-    
     
    
    <div class="lbt"></div>
@@ -47,6 +65,7 @@ export default {
  methods: {}
 };
 </script>
+
 <style lang='less' scoped>
 .top {
   width: 100%;
@@ -54,14 +73,14 @@ export default {
   position: relative;
   img{
     width: 100%;
-    height: 100%;
+    height: 73%;
   }
 }
 .nc {
   width: 319px;
   height: 20px;
   position: absolute;
-  top: 42px;
+  top: 46px;
   padding: 0 28px;
   display: flex;
   justify-content: space-between;
@@ -120,6 +139,70 @@ export default {
     font-size: 4px;
   }
 }
+
+.bj {
+  width: 50px;
+  height: 50px;
+  background: #6B7075;
+  border-radius: 50%;
+  box-shadow:0 0 10px 5px rgba(0, 0, 0,0.3);
+  position: absolute;
+  top: 86px;
+  right: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 28px;
+    height: 28px;
+  }
+}
+.tx {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  box-shadow:0 0 20px 5px rgba(0, 0, 0,0.3);
+  position: absolute;
+  top: 127px;
+  left: 19px;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+
+.hb {
+  width: 220px;
+  height: 44px;
+  position: absolute;
+  top: 152px;
+  left: 121px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // font-family: PingFang-SC-Bold;
+  // font-weight: bold;
+  li {
+    display: flex;
+    flex-direction: column;
+    a {
+      font-family: PingFang-SC-Bold;
+      color: #666666;
+      font-size: 12px;
+      margin-bottom: 8px;
+      // font-weight: bold;
+    }
+    span {
+      font-family: PingFang-SC-Bold;
+      font-size: 14px;
+      color: #000;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+
 
 .lbt {
   width: 100%;
