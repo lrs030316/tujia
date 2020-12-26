@@ -7,7 +7,6 @@ import 'vant/lib/index.css'
 import '../public/iconfont/iconfont.css'
 import './assets/css/style.css'
 import './assets/xypiconfont/iconfont.css'
-// import './assets/css/mine.css'
 import './assets/image/minefont/iconfont.css'
 import router from './router/index'
 import store from './store/index'
@@ -33,7 +32,8 @@ import {
   DropdownMenu, 
   DropdownItem,
   Calendar,
-  Card
+  Card,
+  Field
 } from "vant";
 
 const app = createApp(App)
@@ -58,6 +58,7 @@ app.use(DropdownMenu)
 app.use(DropdownItem)
 app.use(Calendar)
 app.use(Card)
+app.use(Field)
 app.use(router)
 app.use(store)
 app.mount('#app')
