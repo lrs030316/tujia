@@ -58,10 +58,6 @@ const routes =[
       },
       { 
         path: "/cart",
-<<<<<<< HEAD
-        component: () => import("../views/Cart.vue"),
-        meta: { requieAlive: true }      
-=======
         component: () => import("../views/Find/index.vue"),
         redirect: "/Select",
         children: [
@@ -86,7 +82,6 @@ const routes =[
             component: ()=> import ("../views/Find/Findlist/Goout.vue")
           },
         ]
->>>>>>> lrs
       },
       {
         path: "/news",
