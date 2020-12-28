@@ -1,5 +1,6 @@
 <template>
   <!-- 首页搜索框 -->
+  <router-view></router-view>
     <van-search v-model="value" placeholder="请输入搜索关键词" />
     <!-- 首页轮播图 -->
     <div>
@@ -8,19 +9,23 @@
           <img :src="item.src" alt="" />
         </van-swipe-item>
     </van-swipe>
+    <adderss-menu></adderss-menu>
     <serve-menu></serve-menu>
+    <pro-duct></pro-duct>
     </div>
 </template>
 
 <script>
+import AdderssMenu from './AdderssMenu.vue'
 import ServeMenu from './ServeMenu.vue'
+import ProDuct from '../components/ProDuct.vue';
 export default {
    props: {
     autoplay: Number,
     indicatorColor: String,
     swiperList: Array
   },
- data() {
+ data() { 
    return {
      
      swiperList: [
@@ -48,7 +53,9 @@ export default {
    };
  },
  components: {
-   ServeMenu
+    AdderssMenu,
+   ServeMenu,
+  ProDuct
  }
 }
 </script>
@@ -60,7 +67,7 @@ export default {
     color: #fff;
     font-size: 20px;
     line-height: 150px;
-    height: 332px;
+    height: 363px;
     text-align: center;
     background-color: #39a9ed;
   img{

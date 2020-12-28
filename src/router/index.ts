@@ -15,14 +15,51 @@ const routes =[
         meta: { requieAlive: true }
       },
       {
-        path: "/collect",
-        component: () => import("../views/Collect.vue"),
-        meta: { requieAlive: true }
+        path: "/Country",
+        component: () => import("../views/Collect/collectList/Country.vue")
       },
       {
+        path: "/Calendar",
+        component: () => import("../views/Collect/collectList/Calendar.vue")
+      },
+      {
+        path: "/collect",
+        component: () => import('../views/Collect/index.vue'),
+        redirect: "/enshrine",
+        children: [
+          {
+            path: "/enshrine",
+            component: () => import('../views/Collect/headcollect.vue'),
+            redirect: "/house",
+            children: [
+              {
+                path: "/house",
+                component: () => import('../views/Collect/collectList/house.vue')
+              },
+              {
+                path: "/landlord",
+                component: () => import('../views/Collect/collectList/landlord.vue')
+              },
+              {
+                path: "/ranking",
+                component: () => import('../views/Collect/collectList/ranking.vue')
+              },
+              {
+                path: "/find",
+                component: () => import('../views/Collect/collectList/find.vue')
+              },
+            ]
+          },
+          {
+            path: "/browse",
+            component: () => import('../views/Collect/headbrowse.vue'),
+          }
+        ]
+      },
+      { 
         path: "/cart",
         component: () => import("../views/Cart.vue"),
-        meta: { requieAlive: true }
+        meta: { requieAlive: true }      
       },
       {
         path: "/news",
@@ -51,14 +88,22 @@ const routes =[
   { path: '/photograph',
     component:() => import('../views/Photograph.vue')
   },
+  {
+    path: '/indexdetail',
+    component: () => import('../views/IndexDetail.vue')
+  },
   { path: '/:catchAll(.*)',
     component:() => import('../views/Photograph.vue')
+  },
+  {
+    path: '/login',
+    component:() => import('../views/Login.vue')
   }
 ]
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes,
+  routes
 })
 
 // router.beforeEach(async (to,form) =>{
@@ -72,3 +117,37 @@ const router = createRouter({
 // }
 
 export default router
+
+
+
+// {
+      //    path: '/mycollect',
+      //    component: () => import('../Collect/MyCollect/MyCollect.vue'),
+      //   children:[
+      //     {
+            
+      //       children: [
+      //         {
+      //           path: '/housing',
+      //           component: () => import('../Collect/MyCollect/Housing.vue')
+      //         },
+      //         {
+      //           path: '/landlord',
+      //           component: () => import('../Collect/MyCollect/Landlord.vue')
+      //         },
+      //         {
+      //           path: '/list',
+      //           component: () => import('../Collect/MyCollect/List.vue')
+      //         },
+      //         {
+      //           path: '/found',
+      //           component: () => import('../Collect/MyCollect/Found.vue')
+      //         }
+      //       ]
+      //     },
+      //     {
+      //       path: '/history',
+      //       component: () => import('../Collect/History/History.vue')
+      //     }
+      //   ]
+      // },

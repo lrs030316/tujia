@@ -6,10 +6,13 @@ import "amfe-flexible"
 import 'vant/lib/index.css'
 import '../public/iconfont/iconfont.css'
 import './assets/css/style.css'
+import './assets/xypiconfont/iconfont.css'
+import './assets/image/minefont/iconfont.css'
 import router from './router/index'
 import store from './store/index'
 
 import {
+  Button,
   NavBar,
   Image as VanImage,
   Empty,
@@ -30,11 +33,16 @@ import {
   Button,
   Search,
   Tabbar,
-  TabbarItem
+  TabbarItem,
+  DropdownMenu, 
+  DropdownItem,
+  Calendar,
+  Card,
+  Field
 } from "vant";
 
-import {  } from 'vant';
 const app = createApp(App)
+app.use(Button)
 app.use(NavBar)
 app.use(VanImage);
 app.use(Empty)
@@ -56,6 +64,11 @@ app.use(Button);
 app.use(Search)
 app.use(Tabbar)
 app.use(TabbarItem)
+app.use(DropdownMenu)
+app.use(DropdownItem)
+app.use(Calendar)
+app.use(Card)
+app.use(Field)
 app.use(router)
 app.use(store)
 app.mount('#app')
