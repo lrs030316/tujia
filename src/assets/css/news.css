@@ -8,17 +8,24 @@
   bottom: 50px;
   left: 0;
   right: 0;
-  background: #ccc;
+  background: #F7F8FA;
   padding-top: 10px;
 }
 .newsbox {
-  padding: 0 15px;
+  padding: 0 11px;
   background: #fff;
+  margin-bottom: 18px;
 }
 .newsbox li {
   height: 70px;
   display: flex;
   align-items: center;
+}
+.newsbox li img {
+  width: 47px;
+}
+.newsbox .van-divider {
+  margin: 0 15px;
 }
 .newsbox .conbox {
   display: flex;

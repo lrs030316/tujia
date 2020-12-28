@@ -12,6 +12,7 @@
 
   <!-- 收藏、下载、评论 -->
 
+  <!-- 概览内容 -->
   <div class="overview">
     <!-- 标题 -->
     <h2>[一·巢]毗邻xx街道</h2>
@@ -54,38 +55,94 @@
 
   <div class="space"></div>
 
-  <!-- 优惠券 -->
-  <!-- 优惠券单元格 -->
-  <div class="youhui">
-    <van-coupon-cell
-      :coupons="state.coupons"
-      :chosen-coupon="state.chosenCoupon"
-      @click="state.showList = true"
-      icon="location-o"
-    />
-    <!--  -->
-    <!-- 优惠券列表 -->
-    <van-popup
-      v-model:show="state.showList"
-      round
-      position="bottom"
-      style="height: 90%; padding-top: 4px;"
-    >
-      <van-coupon-list
+  <!-- 房源内容 -->
+  <div class="resource">
+    <!-- 优惠券 -->
+    <!-- 优惠券单元格 -->
+    <div class="youhui">
+      <van-coupon-cell
         :coupons="state.coupons"
         :chosen-coupon="state.chosenCoupon"
-        :disabled-coupons="disabledCoupons"
-        @change="onChange"
-        @exchange="onExchange"
+        @click="state.showList = true"
+        icon="location-o"
       />
-    </van-popup>
-    <span class="choose" @click="state.showList = true">可领取</span>
+      <!--  -->
+      <!-- 优惠券列表 -->
+      <van-popup
+        v-model:show="state.showList"
+        round
+        position="bottom"
+        style="height: 90%; padding-top: 4px;"
+      >
+        <van-coupon-list
+          :coupons="state.coupons"
+          :chosen-coupon="state.chosenCoupon"
+          :disabled-coupons="disabledCoupons"
+          @change="onChange"
+          @exchange="onExchange"
+        />
+      </van-popup>
+      <span class="choose" @click="state.showList = true">可领取</span>
+      <van-divider />
+    </div>
+
+    <!-- 日期选择 -->
+    <van-cell to="houseDetail" class="day" >
+      <template #title>
+        <span>
+          <span class="c-g">12月23日</span>
+          <span class="custom-title"> 星期三 入住</span>
+          <van-icon name="arrow" /> 
+        </span>
+        <span class="daytime">共1晚</span>
+        <span>
+          <span class="c-g">12月24日</span>
+          <span class="custom-title"> 星期四 离开</span>
+          <van-icon name="arrow" />
+        </span>
+      </template>    
+    </van-cell>
     <van-divider />
+    <!-- 详细信息 -->
+    <van-card>
+      <template #thumb>
+        <van-image width="100%" height="100%" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+        <span>当前房源</span>
+      </template>
+      <template #title>
+        <span class="custom-title">整套·1居·1床2人·30㎡</span>
+        <van-icon name="arrow" /> 
+      </template>
+      <template #desc>
+        <div>描述信息</div>
+        <div>描述信息</div>
+      </template>
+      <template #tags>
+        <div class="icon">
+          <van-icon name="chat-o" />
+          <span>啊啊啊啊啊啊啊啊啊啊啊</span>
+          <van-icon name="chat-o" />
+          <span>啊啊啊啊</span>
+          <van-icon name="chat-o" />
+          <span>啊啊啊啊啊啊啊啊啊啊啊</span>
+        </div>
+        
+      </template>
+      <template #bottom>
+        <div class="card-left">
+          <van-icon name="chat-o" />
+          <span>啊啊啊啊啊啊啊</span>
+        </div>
+        <div class="card-right">
+          <span class="price">
+            ¥ 950
+            <span class="prices">/晚</span>
+          </span>
+          <van-button size="mini">预订</van-button>
+        </div>
+      </template>
+    </van-card>
   </div>
-
-  <!-- 日期选择 -->
-  
-
 
   
 </template>
