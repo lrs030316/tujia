@@ -155,7 +155,50 @@
     </van-card>
   </div>
 
-  
+  <div class="space"></div>
+
+  <!-- 房屋特点 -->
+  <h2>房屋特点</h2>
+  <van-divider
+    :style="{ borderColor: '#F7F7F7',margin: '0' }"
+    :hairline="false"
+  ></van-divider>
+  <div class="trait">
+    <p class="subtitle">
+      别具一格的<span class="sub-bottom">四合院<span></span></span>
+    </p>
+    <div class="tit">
+      <img src="../assets/images/housedetail/upgrade.png" alt="">
+      <span>民宿升级体验</span>
+    </div>
+    <div class="upbox">
+      <img src="../assets/images/common/head.png" alt="">
+      <div class="upbox-right">
+        <p>适合商旅</p>
+        <span>闪订</span>
+        <span>智能门锁</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="space"></div>
+
+    <h2>房屋设施</h2>
+    <van-divider
+      :style="{ borderColor: '#F7F7F7',margin: '0' }"
+      :hairline="false"
+    ></van-divider>
+    <div class="facilities">
+      <van-cell title="房东说“鸟声落檐间，竹色在户外。有人说，来北京..”" is-link value="更多" />
+      <ul>
+        <li>dadqe
+          <div></div>
+          <div></div>
+        </li>
+      </ul>
+    </div>
+    
+
 </template>
 
 <script lang="ts">
@@ -473,6 +516,103 @@ export default defineComponent ({
     width: 220px;
     .van-icon, span {
       margin-right: 3px;
+    }
+  }
+}
+
+h2 {
+    font-size: 20px;
+    color: #080808;
+    margin-left: 13px;
+  }
+// 房屋特点
+.trait {
+  padding: 0 20px 13px 13px;
+  .subtitle {
+    font-size: 13px;
+    color: #080808;
+    font-weight: bold;
+    .sub-bottom {
+      position: relative;
+      span {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -999;
+        background: #FACBA0;
+      }
+    }
+  }
+  .tit {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #080808;
+    font-weight: bold;
+    img {
+      width: 22px;
+    }
+  }
+  .upbox {
+    width: 100%;
+    height: 54px;
+    background: url(../assets/images/housedetail/upbox.png) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    img {
+      width: 37px;
+      margin: 0 7px 0 9px;
+    }
+    p {
+      font-size: 12px;
+      font-weight: bold;
+      color: #fff;
+      margin: 0 0 8px 0;
+    }
+    span {
+      border: 1px solid #fff;
+      font-size: 12px;
+      color: #fff;
+      padding: 1px 2px;
+      border-radius: 3px;
+      margin-right: 4px;
+    }
+  }
+}
+
+// 房屋设施
+.facilities {
+  padding: 0 19px 0 14px;
+  .van-cell {
+    font-size: 12px;
+    background: url(../assets/images/housedetail/fac-top.png) no-repeat;
+    background-size: 100% 100%;
+    padding-right: 4px;
+    color: #fff;
+    .van-cell__title {
+      flex: 11 1 0%;
+    }
+    .van-cell__value {
+      flex: 1 1 0%;
+      color: #fff;
+    }
+    .van-cell__right-icon {
+      color: #fff;
+    }
+  }
+  ul {
+    background: #F7F8FA;
+    border-radius: 2px;
+    li {
+      padding-left: 15px;
+      display: flex;
+      align-items: flex-end;
+      div {
+        width: 110px;
+      }
     }
   }
 }
