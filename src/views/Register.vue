@@ -1,15 +1,18 @@
 <template>
   <div>
-    <div class="fjf">
+    <div class="zctop">
       <a href="">
         <img src="../assets/image/loginimg/gb.png" alt="">
       </a>
-      <span>注册预订返积分</span>
+      <span>登录</span>
     </div>
-    <div class="dl">
-      <span>登录途家</span>
+    <div class="zcbt">
+      <span>注册途家</span>
     </div>
-    <p class="fw">登录以使用更多服务</p>
+    <p class="fw">
+      成为途家会员以使用更多服务，注册即表示您已同意
+      <span>《途家 网服务协议》《隐私政策》</span>
+    </p>
 
     <div class="sjh">
       <a href="">
@@ -20,36 +23,6 @@
     </div>
     
     <van-button class="fsyzm" type="primary" size="large">发送验证码</van-button><br/>
-
-    <div class="zhmm">
-      <a href="">账号密码登录</a>
-    </div>
-
-    <div class="dsf">
-      <a class="dltilte" href="">第三方登录</a>
-      <ul>
-        <li>
-          <a href="">
-            <img src="../assets/image/loginimg/wx.png" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="../assets/image/loginimg/wb.png" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="../assets/image/loginimg/qq.png" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="../assets/image/loginimg/iphone.png" alt="">
-          </a>
-        </li>
-      </ul>
-    </div>
   </div>
 </template>
 
@@ -69,11 +42,8 @@ export default {
 };
 </script>
 
-
-
-
 <style lang="less" scoped>
-.fjf {
+.zctop {
   width: 337px;
   height: 20px;
   margin-top: 54px;
@@ -95,8 +65,7 @@ export default {
     font-size: 12px;
   }
 }
-
-.dl {
+.zcbt {
   width: 116px;
   height: 30px;
   border-left: 3px solid #F09B56;
@@ -115,7 +84,12 @@ export default {
   margin-top: 13px;
   font-size: 12px;
   color: #9C9C9C;
+  margin-right: 26px;
+  span {
+    color: #000;
+  }
 }
+
 .sjh {
   width: 339px;
   height: 30px;
@@ -164,45 +138,7 @@ export default {
   font-size: 18px;
   border: none;
 }
-.zhmm {
-  width: 100%;
-  height: 20px;
-  margin-top: 19px;
-  text-align: center;
-  a {
-    color: #666;
-    font-size: 12px;
-    line-height: 20px;
-  }
-}
-.dsf {
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  bottom: 43px;
-  .dltilte {
-    font-family: PingFang-SC-Regular;
-    font-size: 10px;
-    color: #8E8E8E;
-  }
-  ul {
-    margin-top: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    li {
-      margin: 0 8px;
-      a {
-        display: block;
-        width: 40px;
-        height: 40px;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-  }
-}
+
 </style>
+
+
