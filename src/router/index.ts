@@ -94,6 +94,10 @@ const routes =[
   },
   { path: '/:catchAll(.*)',
     component:() => import('../views/Photograph.vue')
+  },
+  {
+    path: '/login',
+    component:() => import('../views/Login.vue')
   }
 ]
 
