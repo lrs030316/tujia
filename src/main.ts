@@ -37,7 +37,9 @@ import {
   DropdownMenu, 
   DropdownItem,
   Calendar,
-  Field
+  Field,
+  Grid,
+  GridItem
 } from "vant";
 
 const app = createApp(App)
@@ -66,6 +68,9 @@ app.use(DropdownMenu)
 app.use(DropdownItem)
 app.use(Calendar)
 app.use(Field)
+app.use(Icon)
+app.use(Grid)
+app.use(GridItem)
 app.use(router)
 app.use(store)
 app.mount('#app')

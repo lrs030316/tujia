@@ -1,52 +1,67 @@
 <template>
  <div>
-    <div class="top">
-      <img src="../assets/image/mineimg/topbg.png" alt="">
+  <div class="top">
+    <img src="../assets/image/mineimg/topbg.png" alt="">
 
-      <div class="nc">
-        <span>遇见温柔风.</span>
-        <a href="">
-          <img src="../assets/image/mineimg/sz.png" alt="">
-        </a>
-      </div>
+    <div class="nc">
+      <span>遇见温柔风.</span>
+      <a href="">
+        <img src="../assets/image/mineimg/sz.png" alt="">
+      </a>
+    </div>
 
-      <div class="mine">
-        <img src="../assets/image/mineimg/pthy.png" alt="">
-        <span>普通会员</span>
-        <i class="iconfont icon-arrow-right"></i>
-      </div>
+    <div class="mine">
+      <img src="../assets/image/mineimg/pthy.png" alt="">
+      <span>普通会员</span>
+      <i class="iconfont icon-arrow-right"></i>
+    </div>
 
-      <div class="xyrz">
-        <span>通过信用认证，可享信用免押金</span>
-        <i class="iconfont icon-arrow-right"></i>
-      </div>
+    <div class="xyrz">
+      <span>通过信用认证，可享信用免押金</span>
+      <i class="iconfont icon-arrow-right"></i>
+    </div>
 
-      <div class="bj">
-        <img src="../assets/image/mineimg/bj.png" alt="">
-      </div>
+    <div class="bj">
+      <img src="../assets/image/mineimg/bj.png" alt="">
+    </div>
 
-      <div class="tx">
-        <img src="../assets/image/mineimg/tx.png" alt="">
-      </div>
-      
-      <ul class="hb">
-        <li>
-          <a href="">红包</a>
-          <span>0个</span>
-        </li>
-        <li>
-          <a href="">积分商城</a>
-          <span>0分</span>
-        </li>
-        <li>
-          <a href="">余额</a>
-          <span>￥0</span>
-        </li>
-      </ul>
+    <div class="tx">
+      <img src="../assets/image/mineimg/tx.png" alt="">
     </div>
     
-   
-   <div class="lbt"></div>
+    <ul class="hb">
+      <li>
+        <a href="">红包</a>
+        <span>0个</span>
+      </li>
+      <li>
+        <a href="">积分商城</a>
+        <span>0分</span>
+      </li>
+      <li>
+        <a href="">余额</a>
+        <span>￥0</span>
+      </li>
+    </ul>
+
+    <div class="dd">
+      <span>我的订单</span>
+      <a href="">
+        查看全部
+        <van-icon name="arrow" color="#707070" />
+      </a>
+    </div>
+  </div>
+  
+  <div class="lbt">
+  <img src="../assets/image/mineimg/banner.png" alt="">
+  </div>
+  
+  <van-grid :column-num="3">
+    <van-grid-item v-for="value in 10" :key="value" icon="photo-o" text="文字" />
+  </van-grid>
+
+
  </div>
 </template>
 
@@ -181,8 +196,6 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // font-family: PingFang-SC-Bold;
-  // font-weight: bold;
   li {
     display: flex;
     flex-direction: column;
@@ -191,7 +204,6 @@ export default {
       color: #666666;
       font-size: 12px;
       margin-bottom: 8px;
-      // font-weight: bold;
     }
     span {
       font-family: PingFang-SC-Bold;
@@ -202,11 +214,42 @@ export default {
     }
   }
 }
+.dd {
+  width: 337px;
+  height: 16px;
+  position: absolute;
+  bottom: 10px;
+  padding: 0 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: PingFang-SC-Bold;
+  span {
+    font-size: 16px;
+    font-weight: Bold;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666666;
+  }
+}
 
 
 .lbt {
   width: 100%;
   height: 88px;
-  background:rgb(161, 13, 13);
+  background:#F7F8FA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 340px;
+    height: 63px;
+  }
 }
+
+
+
 </style>
