@@ -1,11 +1,10 @@
 import { createStore } from 'vuex'
+import IndexDetail from './IndexDetail'
 
 // create new store instance
 const store = createStore({
-  state () {
-    return {
-      count:10
-    }
+  modules: {
+    IndexDetail
   }
  
 })

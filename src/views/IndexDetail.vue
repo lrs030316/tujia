@@ -1,53 +1,111 @@
 <template>
-  <div class="all">
-    <index-header />
-    <ul class="list">
+  <index-header />
+  <ul class="list">
+    <li
+      v-for="(item, index) in list"
+      :key="index"
+      @click="change(index)"
+      :class="{ active: index === num }"
+    >
+      {{ item }}
+      <span class="iconfont icon-xiala"></span>
+    </li>
+  </ul>
+  <div class="action">
+    <ul>
       <li
-        v-for="(item, index) in list"
+        v-for="(item, index) in actionList"
         :key="index"
-        @click="change(index)"
-        :class="{ active: index === num }"
+        @click="changeAction(index)"
+        :class="{ activeAction: index === number }"
       >
-        {{ item }}
-        <span class="iconfont icon-xiala"></span>
+        <div>
+          {{ item }}
+          <span
+            class="iconfont icon-xiala"
+            v-if="index === actionList.length - 1"
+          ></span>
+        </div>
       </li>
     </ul>
-    <div class="action">
-      <ul>
-        <li
-          v-for="(item, index) in actionList"
-          :key="index"
-          @click="changeAction(index)"
-          :class="{ activeAction: index === number }"
-        >
-          <div>
-            {{ item }}
-            <span
-              class="iconfont icon-xiala"
-              v-if="index === actionList.length - 1"
-            ></span>
-          </div>
-        </li>
-      </ul>
+  </div>
+  <div class="redPackage">
+    <div class="redleft">
+      <img src="http://10.31.162.85:4000/indexdetail/redPakage.png" alt="" />
+      <span class="discount">9.5折优惠</span>
+      <span class="catch">去领取 &nbsp; ></span>
     </div>
-    <div class="redPackage">
-      <div class="redleft">
-        <img src="../assets/img/redPakage.png" alt="" />
-        <span class="discount">9.5折优惠</span>
-        <span class="catch">去领取 &nbsp; ></span>
+  </div>
+  <div class="prompt">
+    <p>
+      温馨提示：请您关注当地主管部门的出行建议和要求，合理Aap安排出行，做好自我防护。
+    </p>
+  </div>
+  <van-swipe @change="onChange" class="indexdetail">
+    <van-swipe-item v-for="item in firstlist" :key="item.id">
+      <div class="rank">
+        <img
+          class="cup"
+          src="http://10.31.162.85:4000/indexdetail/cup.png"
+          alt=""
+        />
+        <span>{{ item.title }}</span>
       </div>
-    </div>
-    <div class="prompt">
-      <p>
-        温馨提示：请您关注当地主管部门的出行建议和要求，合理Aap安排出行，做好自我防护。
-      </p>
-    </div>
+      <div class="rightlist">
+        <div class="out_photo">
+          <img
+            class="photo"
+            src="http://10.31.162.85:4000/indexdetail/photo.png"
+            alt=""
+          />
+        </div>
+        <div class="out_heart" @click="like">
+          <img
+            class="heart"
+            src="http://10.31.162.85:4000/indexdetail/heart.png"
+            alt=""
+          />
+          <p class="count">
+            {{ 1208 + count }}
+          </p>
+        </div>
+        <div class="out_information">
+          <img
+            @click="com"
+            class="information"
+            src="http://10.31.162.85:4000/indexdetail/information.png"
+            alt=""
+          />
+          <p class="comment">
+            {{ 938 + comment }}
+          </p>
+        </div>
+      </div>
+      <div class="score">
+        <span>
+          {{ item.score }} | 
+        </span>
+        <span>
+          {{ item.comments }}
+        </span>
+      </div>
+      <img class="bg" :src="item.src" alt="" />
+    </van-swipe-item>
+    <template #indicator>
+      <div class="custom-indicator">
+        {{ current + 1 }}/{{ firstlist.length }}
+      </div>
+    </template>
+  </van-swipe>
+  <div class="room_intro">
+    <p>9四合院浪漫大床【荣小姐】故宫天安门南锣</p>
+    <p>整套·1居1床2人·距后海/南锣鼓巷地区直线759米</p>
   </div>
 </template>
 
 <script>
 import { ref, reactive } from "vue";
-import indexHeader from '../components/IndexHeader.vue';
+import indexHeader from "../components/IndexHeader.vue";
 
 export default {
   setup() {
@@ -67,84 +125,86 @@ export default {
     const changeAction = (i) => {
       number.value = i;
     };
-    return { list, change, num, actionList, number, changeAction };
+
+    const current = ref(0);
+    const onChange = () => {
+      current = index;
+    };
+
+    let count = ref(0);
+    const like = () => {
+      count.value++;
+    };
+
+    let comment = ref(0);
+    const com = () => {
+      comment.value++;
+    };
+    return {
+      list,
+      change,
+      num,
+      actionList,
+      number,
+      changeAction,
+      count,
+      like,
+      comment,
+      com,
+    };
   },
   components: {
-    indexHeader
-  }
+    indexHeader,
+  },
+  data() {
+    return {
+      current: 0,
+      firstlist: [
+        {
+          id: 1,
+          src: "http://10.31.162.85:4000/indexdetail/banner.png",
+          title: "后海/南锣鼓巷地区优质服务榜 NO.1",
+          score: "4.9分",
+          comments: "\"房间整齐\""
+        },
+        {
+          id: 2,
+          src: "http://10.31.162.85:4000/indexdetail/banner1.png",
+          title: "前海/我不想写代码 NO.1",
+          score: "1.2分",
+          comments: "\"乱七八糟\""
+        },
+        {
+          id: 3,
+          src: "http://10.31.162.85:4000/indexdetail/banner.png",
+          title: "谁爱写谁写，别找我 NO.1",
+          score: "4.1分",
+          comments: "\"还可以\""
+        },
+        {
+          id: 4,
+          src: "http://10.31.162.85:4000/indexdetail/banner1.png",
+          title: "劳资撤了 NO.1",
+          score: "2.2分",
+          comments: "\"凑活吧\""
+        },
+      ]
+    };
+  },
+  methods: {
+    onChange(index) {
+      this.current = index;
+    },
+  },
 };
 </script>
 <style lang="less" scoped>
-header {
-  margin-top: 10px;
-  margin-bottom: 17px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  .icon-houtui {
-    font-size: 25px;
-  }
-  .put {
-    width: 272.5px;
-    height: 32.5px;
-    opacity: 0.5;
-    display: flex;
-    .put-left {
-      width: 89px;
-      height: 100%;
-      border-right: 1px solid #fff;
-      border-radius: 6px 0 0 6px;
-      display: flex;
-      overflow: hidden;
-      background: #e4e4e4;
-      .location {
-        width: 40%;
-        height: 32.5px;
-        color: #000;
-        font-size: 13px;
-        text-align: center;
-        line-height: 32.5px;
-        font-weight: bold;
-      }
-      .time {
-        flex: 1;
-        .enter-leave {
-          font-size: 10px;
-          color: #666666;
-        }
-        .date {
-          font-size: 9px;
-          color: #000;
-          font-weight: bold;
-        }
-      }
-    }
-    input::-webkit-input-placeholder {
-      font-size: 10px;
-      text-align: center;
-      color: #909090;
-    }
-    .put-right {
-      flex: 1;
-      border-radius: 0 6px 6px 0;
-      border: none;
-      outline: none;
-      background: #e4e4e4;
-    }
-  }
-  img {
-    width: 23px;
-    height: 23px;
-  }
-  .text {
-    font-size: 12px;
-  }
-}
 .list {
   display: flex;
   justify-content: space-evenly;
   font-size: 11px;
   margin-bottom: 14px;
+  padding-top: 59.5px;
 }
 .active {
   color: #f19f5d;
@@ -219,22 +279,134 @@ header {
     }
   }
 }
-.all {
-  position: relative;
-}
 .prompt {
   margin-top: 11px;
   width: 338px;
   height: 63px;
   background: rgba(253, 243, 243, 0.5);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: 20px;
+  margin-bottom: 20px;
   p {
     font-size: 11px;
-    padding-left: 18px;
-    padding-right: 24px;
+    padding: 17px 24px 17px 24px;
     color: #3e3e3e;
+  }
+}
+.custom-indicator {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  padding: 2px 5px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.indexdetail {
+  .van-swipe-item {
+    position: relative;
+    .bg {
+      width: 338px;
+      height: 225px;
+      margin-left: 20px;
+    }
+    .rank {
+      position: absolute;
+      height: 18px;
+      line-height: 18px;
+      padding: 0 8px;
+      background: #f09b56;
+      border-radius: 9px;
+      left: 27px;
+      top: 8px;
+      span {
+        font-size: 9px;
+        color: #fff;
+      }
+      .cup {
+        width: 10px;
+        height: 11px;
+      }
+    }
+    .rightlist {
+      position: absolute;
+      right: 28px;
+      top: 9px;
+      width: 45px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      .out_photo {
+        margin-bottom: 9px;
+        .photo {
+          width: 41px;
+          height: 45px;
+        }
+      }
+      .out_heart {
+        margin-bottom: 11px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .heart {
+          width: 23px;
+          height: 23px;
+        }
+        .count {
+          width: 24px;
+          text-align: center;
+          margin: 0;
+          font-size: 12px;
+          color: #fff;
+        }
+      }
+      .out_information {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .information {
+          width: 23px;
+          height: 23px;
+        }
+        .comment {
+          margin: 0;
+          width: 24px;
+          text-align: center;
+          color: #fff;
+          font-size: 12px;
+        }
+      }
+    }
+    .score {
+      position: absolute;
+      height: 18px;
+      line-height: 18px;
+      background: rgba(240, 155, 86, .3);
+      border-radius: 9px;
+      left: 28px;
+      bottom: 10px;
+      padding: 0 10px;
+      span {
+        color: #fff;
+        &:nth-of-type(2) {
+          font-size: 9px;
+        }
+      }
+    }
+  }
+  .custom-indicator {
+    width: 40px;
+    height: 18px;
+    background: rgba(240, 155, 86, .3);
+    border-radius: 9px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
   }
 }
 </style>

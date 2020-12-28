@@ -7,8 +7,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
-router.get("/sylbt",function(req,res,next){
-  let sqlSearch = `select * from sylbt`;
+router.get("/indexdetail",function(req,res,next){
+  let sqlSearch = `select * from sy_search_list`;
   conn.query(sqlSearch, (err, results) => {
       let obj = {
         status:1
