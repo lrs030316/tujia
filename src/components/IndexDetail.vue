@@ -23,9 +23,9 @@
           placeholder="搜索北京的景点、地标、房源"
         />
       </div>
-      <img src="../assets/img/ico-map.png" alt="" />
+      <img src="http://10.31.162.85:4000/indexdetail/ico-map.png" alt="" />
       <span class="text">地图</span>
-    </header>
+  </header>
 </template>
 
 <script>
@@ -45,11 +45,14 @@ export default {
 </script>
 <style lang="less" scoped>
 header {
-  margin-top: 10px;
-  margin-bottom: 17px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 17px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  position: fixed;
+  background: #fff;
   .icon-houtui {
     font-size: 25px;
   }
