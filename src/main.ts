@@ -15,6 +15,7 @@ import store from './store/index'
 import {
   Button,
   NavBar,
+  Image as VanImage,
   Empty,
   Swipe,
   SwipeItem,
@@ -27,19 +28,22 @@ import {
   CouponCell,
   CouponList,
   Tag,
+  Icon,
+  Skeleton,
+  Card,
   Search,
   Tabbar,
   TabbarItem,
   DropdownMenu, 
   DropdownItem,
   Calendar,
-  Card,
   Field
 } from "vant";
 
 const app = createApp(App)
 app.use(Button)
 app.use(NavBar)
+app.use(VanImage);
 app.use(Empty)
 app.use(Swipe)
 app.use(SwipeItem)
@@ -52,13 +56,15 @@ app.use(Popup)
 app.use(CouponCell)
 app.use(CouponList)
 app.use(Tag)
+app.use(Icon);
+app.use(Skeleton);
+app.use(Card);
 app.use(Search)
 app.use(Tabbar)
 app.use(TabbarItem)
 app.use(DropdownMenu)
 app.use(DropdownItem)
 app.use(Calendar)
-app.use(Card)
 app.use(Field)
 app.use(router)
 app.use(store)
