@@ -1,4 +1,5 @@
 <template>
+  <div class="product">
   <div class="serve-menu">
       <div class="member">
         <i><img src="../../syimg/mm1.png" alt=""></i>
@@ -16,6 +17,7 @@
           </li>
         </ul>
       </div>
+    </div>
     </div>
 </template>
 
@@ -67,16 +69,18 @@ export default {
      ]
    };
  },
+ components: {
+ }
 
 };
 </script>
 <style lang='less' scoped>
+.product {
+  padding-top:100px ;
 .serve-menu{
   padding: 0 18px ;
   height:230px;
   background: #fff;
-  padding-top:129px ;
- 
   .member{   
     height: 50px;
     background: #FBF1F1;
@@ -134,5 +138,6 @@ export default {
      }
     }
   }
+ }
 }
 </style>

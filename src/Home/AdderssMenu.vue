@@ -23,8 +23,11 @@ import TaBle3 from '../components/TaBle3.vue'
 export default {
  data() {
    return {
-     currentComponent: ''
+     currentComponent: 'TaBle1'
    };
+ },
+ methods: {
+  
  },
  components: {
    TaBle1:TaBle1, 
@@ -34,7 +37,6 @@ export default {
  methods: {
    handeleClick(i) {
    this.currentComponent = `TaBle${i}`;
-   style.background="#fff";
    
    }
  }
@@ -52,8 +54,8 @@ export default {
      border-radius:  15px 15px 0 0;
      background: #fff;
      .table-menu{
-      display: flex;
-      justify-content: space-evenly;
+       display: flex;
+       justify-content: space-evenly;
        background: #F2F3F5;
        border-radius:  15px 15px 0 0;
      .table{
@@ -73,9 +75,11 @@ export default {
       }
         .table:focus{
           background: #fff;
+
         }      
       .item-1{
         border-radius: 15px 30px 0 0;
+        background: #fff;
       }
       .item-2{
         border-radius: 30px 15px  0 0;

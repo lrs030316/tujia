@@ -65,7 +65,6 @@ export default {
   }
   .discount {
     height: 155px;
-    background: yellowgreen;
     display: flex;
     justify-content: space-around;
     align-items: center;

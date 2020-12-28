@@ -8,7 +8,7 @@
       </div>
       <p class="search">关键字/位置/民宿名</p>
       <p class="search"><span>芭提雅</span><span>曼谷/月宫/普吉岛</span><span>大佛塔</span></p>
-      <p class="search"><span>玉佛寺/湄南河</span><span>金沙岛</span><span>大皇宫</span><span>海淀区</span></p>
+      <p class="search"><span>玉佛寺/湄南河</span><span>金沙岛</span><span>大皇宫</span></p>
       <div class="search-button">开始搜索</div>
       </div>
       <div class="serves"><i><img src="../../syimg/sy3.png" alt=""></i><p>信用住.先住后付</p><i><img src="../../syimg/fy.png" alt=""></i><p>24小时客服</p><i><img src="../../syimg/kf.png" alt=""></i><p>房源房东真实认证</p></div>
