@@ -1,83 +1,90 @@
 <template>
- <div>
-  <div class="top">
-    <img src="../assets/image/mineimg/topbg.png" alt="">
+  <div>
+    <div class="top">
+      <img src="../assets/image/mineimg/topbg.png" alt="">
 
-    <div class="nc">
-      <span>遇见温柔风.</span>
-      <a href="">
-        <img src="../assets/image/mineimg/sz.png" alt="">
-      </a>
+      <div class="nc">
+        <span>遇见温柔风.</span>
+        <a href="">
+          <img src="../assets/image/mineimg/sz.png" alt="">
+        </a>
+      </div>
+
+      <div class="mine">
+        <img src="../assets/image/mineimg/pthy.png" alt="">
+        <span>普通会员</span>
+        <i class="iconfont icon-arrow-right"></i>
+      </div>
+
+      <div class="xyrz">
+        <span>通过信用认证，可享信用免押金</span>
+        <i class="iconfont icon-arrow-right"></i>
+      </div>
+
+      <div class="bj">
+        <img src="../assets/image/mineimg/bj.png" alt="">
+      </div>
+
+      <div class="tx">
+        <img src="../assets/image/mineimg/tx.png" alt="">
+      </div>
+
+      <ul class="hb">
+        <li>
+          <a href="">红包</a>
+          <span>0个</span>
+        </li>
+        <li>
+          <a href="">积分商城</a>
+          <span>0分</span>
+        </li>
+        <li>
+          <a href="">余额</a>
+          <span>￥0</span>
+        </li>
+      </ul>
+
+      <div class="dd">
+        <span>我的订单</span>
+        <a href="">
+          查看全部
+          <van-icon name="arrow" color="#707070" />
+        </a>
+      </div>
     </div>
 
-    <div class="mine">
-      <img src="../assets/image/mineimg/pthy.png" alt="">
-      <span>普通会员</span>
-      <i class="iconfont icon-arrow-right"></i>
+    <div class="lbt">
+      <img src="../assets/image/mineimg/banner.png" alt="">
     </div>
 
-    <div class="xyrz">
-      <span>通过信用认证，可享信用免押金</span>
-      <i class="iconfont icon-arrow-right"></i>
-    </div>
-
-    <div class="bj">
-      <img src="../assets/image/mineimg/bj.png" alt="">
-    </div>
-
-    <div class="tx">
-      <img src="../assets/image/mineimg/tx.png" alt="">
-    </div>
-    
-    <ul class="hb">
+    <ul class="cygn">
       <li>
-        <a href="">红包</a>
-        <span>0个</span>
-      </li>
-      <li>
-        <a href="">积分商城</a>
-        <span>0分</span>
-      </li>
-      <li>
-        <a href="">余额</a>
-        <span>￥0</span>
+        <a href="">
+          <img src="../assets/image/mineimg/" alt="">
+          <span></span>
+          <p></p>
+        </a>
       </li>
     </ul>
 
-    <div class="dd">
-      <span>我的订单</span>
-      <a href="">
-        查看全部
-        <van-icon name="arrow" color="#707070" />
-      </a>
-    </div>
   </div>
-  
-  <div class="lbt">
-  <img src="../assets/image/mineimg/banner.png" alt="">
-  </div>
-  
-  <van-grid :column-num="3">
-    <van-grid-item v-for="value in 10" :key="value" icon="photo-o" text="文字" />
-  </van-grid>
-
-
- </div>
 </template>
 
 <script>
 export default {
- data() {
-   return {};
- },
+  data () {
+    return {
+      
+    };
+  },
 
- components: {},
+  components: {},
 
- computed: {},
+  computed: {},
 
- mounted() {},
+  mounted () { },
 
- methods: {}
+  methods: {}
 };
 </script>
 
@@ -86,7 +93,7 @@ export default {
   width: 100%;
   height: 251px;
   position: relative;
-  img{
+  img {
     width: 100%;
     height: 73%;
   }
@@ -105,7 +112,7 @@ export default {
     font-size: 18px;
     letter-spacing: 1px;
   }
-  a{
+  a {
     width: 20px;
     height: 20px;
     img {
@@ -115,10 +122,10 @@ export default {
   }
 }
 
-.mine{
+.mine {
   width: 80px;
   height: 18px;
-  background: rgba(255, 255, 255,0.3);
+  background: rgba(255, 255, 255, 0.3);
   border: none;
   border-radius: 9px;
   position: absolute;
@@ -128,7 +135,7 @@ export default {
   justify-content: center;
   align-items: center;
   color: #fff;
-  img{
+  img {
     margin-left: 8px;
     width: 12px;
     height: 15px;
@@ -158,9 +165,9 @@ export default {
 .bj {
   width: 50px;
   height: 50px;
-  background: #6B7075;
+  background: #6b7075;
   border-radius: 50%;
-  box-shadow:0 0 10px 5px rgba(0, 0, 0,0.3);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 86px;
   right: 13px;
@@ -176,7 +183,7 @@ export default {
   width: 74px;
   height: 74px;
   border-radius: 50%;
-  box-shadow:0 0 20px 5px rgba(0, 0, 0,0.3);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 127px;
   left: 19px;
@@ -236,11 +243,10 @@ export default {
   }
 }
 
-
 .lbt {
   width: 100%;
   height: 88px;
-  background:#F7F8FA;
+  background: #f7f8fa;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -249,7 +255,9 @@ export default {
     height: 63px;
   }
 }
+.cygn {
+  width: 100%;
 
-
+}
 
 </style>
