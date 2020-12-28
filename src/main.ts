@@ -30,14 +30,12 @@ import {
   Icon,
   Skeleton,
   Card,
-  Button,
   Search,
   Tabbar,
   TabbarItem,
   DropdownMenu, 
   DropdownItem,
   Calendar,
-  Card,
   Field
 } from "vant";
 
@@ -60,14 +58,12 @@ app.use(Tag)
 app.use(Icon);
 app.use(Skeleton);
 app.use(Card);
-app.use(Button);
 app.use(Search)
 app.use(Tabbar)
 app.use(TabbarItem)
 app.use(DropdownMenu)
 app.use(DropdownItem)
 app.use(Calendar)
-app.use(Card)
 app.use(Field)
 app.use(router)
 app.use(store)
