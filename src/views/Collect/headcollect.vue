@@ -12,19 +12,19 @@ export default {
     return {
       navList: [
         {
-          path: "/house",
+          path: "/House",
           name: "房屋"
         },
         {
-          path: "/landlord",
+          path: "/Landlord",
           name: "房东"
         },
         {
-          path: "/ranking",
+          path: "/Ranking",
           name: "榜单"
         },
         {
-          path: "/find",
+          path: "/Find",
           name: "发现"
         }
       ],

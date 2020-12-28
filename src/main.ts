@@ -31,6 +31,8 @@ import {
   Calendar,
   Card,
   Button,
+  Tab,
+  Tabs
 } from "vant";
 
 import {  } from 'vant';
@@ -51,11 +53,13 @@ app.use(Tag)
 app.use(Search)
 app.use(Tabbar)
 app.use(TabbarItem)
+app.use(DropdownMenu)
+app.use(DropdownItem)
+app.use(Calendar)
+app.use(Card)
+app.use(Button)
 app.use(router)
 app.use(store)
-app.use(DropdownMenu);
-app.use(DropdownItem);
-app.use(Calendar);
-app.use(Card);
-app.use(Button);
+app.use(Tab);
+app.use(Tabs);
 app.mount('#app')
