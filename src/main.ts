@@ -29,8 +29,8 @@ import {
   CouponList,
   Tag,
   Icon,
+  GridItem,
   Skeleton,
-  Card,
   Search,
   Tabbar,
   TabbarItem,
@@ -38,8 +38,9 @@ import {
   DropdownItem,
   Calendar,
   Field,
-  Grid,
-  GridItem
+  Card,
+  Tab,
+  Tabs
 } from "vant";
 
 const app = createApp(App)
@@ -69,8 +70,11 @@ app.use(DropdownItem)
 app.use(Calendar)
 app.use(Field)
 app.use(Icon)
-app.use(Grid)
 app.use(GridItem)
+app.use(Card)
+app.use(Button)
+app.use(Tab);
+app.use(Tabs);
 app.use(router)
 app.use(store)
 app.mount('#app')

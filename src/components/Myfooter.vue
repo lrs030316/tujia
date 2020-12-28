@@ -4,7 +4,7 @@
     <van-tabbar  v-model="active" route :placeholder="true">
       <van-tabbar-item
         v-for="item in tabbarList"
-        :key="item.to"
+        :key="item.title"
         :to="item.to"
       >
         {{ item.title }}
