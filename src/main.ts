@@ -29,6 +29,7 @@ import {
   CouponList,
   Tag,
   Icon,
+  Grid,
   GridItem,
   Skeleton,
   Search,
@@ -73,8 +74,9 @@ app.use(Icon)
 app.use(GridItem)
 app.use(Card)
 app.use(Button)
-app.use(Tab);
-app.use(Tabs);
+app.use(Tab)
+app.use(Tabs)
+app.use(Grid)
 app.use(router)
 app.use(store)
 app.mount('#app')
