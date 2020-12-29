@@ -58,8 +58,9 @@ app.use(DropdownItem)
 app.use(Calendar)
 app.use(Card)
 app.use(Button)
+app.use(Tab)
+app.use(Tabs)
+
 app.use(router)
 app.use(store)
-app.use(Tab);
-app.use(Tabs);
 app.mount('#app')

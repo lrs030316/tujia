@@ -11,7 +11,7 @@
     <div class="list-3">
       <img :src="imgUrc" alt="">
       <span>Dyxn6636</span>
-      <div class="">
+      <div class="praise">
         <img :src="imgUrd" alt="">
         <span>162</span>
       </div>
@@ -98,7 +98,7 @@ export default {
     top: 12px;
     width: 22px;
     height: 22px;
-    padding-left: 8px ;
+    margin-left: 8px ;
   }
   .list-3 span{
     width: 44px;
@@ -108,5 +108,21 @@ export default {
     color: #111111;
     margin-left: 4px;
     margin-top:6px ;
+  }
+  .list-3 .praise {
+    display: flex;
+    height: 100%;
+    width: 37px;
+    float: right;
+  }
+  .list-3 .praise img{
+    width: 22px;
+    height: 22px;
+
+  }
+  .list-3 .praise span{
+    font-size: 6px;
+    color: #999;
+    line-height: 9px;
   }
 </style>
