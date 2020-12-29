@@ -54,10 +54,10 @@ export default defineComponent ({
 </script>
 
 <style lang="less">
-* {
-  margin: 0;
-  padding: 0;
-}
+ * {
+   margin: 0;
+   padding: 0;
+ }
 
 .concent {
   position: absolute;

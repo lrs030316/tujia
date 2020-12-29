@@ -62,8 +62,10 @@ export default {
          
         }
       .search {
+        margin-top: 15px;
         font-size: 12px;
         color: #666;
+        margin-bottom: 10px;
         span {
           height: 21px;
           background: #F1F2F4;
@@ -84,6 +86,7 @@ export default {
        }
       }
     .serves {
+        margin-top: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -95,6 +98,7 @@ export default {
         }
       }
   .stage { 
+    margin-top: 10px;
     font-size: 10px;
     font-weight: 500;
     text-align: center;

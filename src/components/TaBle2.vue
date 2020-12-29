@@ -6,7 +6,7 @@
       <div class="date">
         <div class="date-1"><span class="item">入住</span><span class="itemv">12月7日</span ></div><div class="date-1"><span class="item">离店</span><span class="itemv">12月8日</span></div><div class="date-1"><span class="item">入数</span><span class="itemv">不限</span></div>
       </div>
-      <p class="search">关键字/位置/民宿名</p>
+      <p class="search ms">关键字/位置/民宿名</p>
       <p class="search"><span>芭提雅</span><span>曼谷/月宫/普吉岛</span><span>大佛塔</span></p>
       <p class="search"><span>玉佛寺/湄南河</span><span>金沙岛</span><span>大皇宫</span></p>
       <div class="search-button">开始搜索</div>
@@ -63,14 +63,21 @@ export default {
           height: 15px;
          
         }
+        .ms {
+          margin-top: 15px;
+        }
       .search {
         font-size: 12px;
         color: #666;
+        margin-bottom: 15px;
         span {
-          height: 21px;
-          background: #F1F2F4;
+          display: inline-block;
+          height: 20px;
+          background:#F1F2F4;
           border-radius: 11px;
-          margin-right: 3px;
+          margin-right: 5px;
+          text-align: center;
+          line-height: 26px;
         } 
       }
       .search-button {
@@ -82,10 +89,10 @@ export default {
         font-weight: 500;
         color: #FFFFFF;
         line-height: 38px;
-
        }
       }
     .serves {
+        margin-top: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -97,6 +104,7 @@ export default {
         }
       }
   .stage { 
+    margin-top: 10px;
     font-size: 10px;
     font-weight: 500;
     text-align: center;
