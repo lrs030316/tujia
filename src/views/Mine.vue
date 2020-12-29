@@ -60,13 +60,77 @@
     <ul class="cygn">
       <li>
         <a href="">
-          <img src="../assets/image/mineimg/" alt="">
-          <span></span>
-          <p></p>
+          <img src="../assets/image/mineimg/content.png" alt="">
+          <span class="big">内容管理</span>
+          <span class="small">途中故事</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="../assets/image/mineimg/see.png" alt="">
+          <span class="big">浏览历史</span>
+          <span class="small"></span>
+        </a>
+      </li>
+      <li class="yb">
+        <a href="">
+          <img src="../assets/image/mineimg/cyinfo.png" alt="">
+          <span class="big">常用信息</span>
+          <span class="small">入住人/地址</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="../assets/image/mineimg/money.png" alt="">
+          <span class="big">开具发票</span>
+          <span class="small">历史发票</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="../assets/image/mineimg/invite.png" alt="">
+          <span class="big">邀请好友</span>
+          <span class="small">邀请好友得奖励</span>
+        </a>
+      </li>
+      <li class="yb">
+        <a href="">
+          <img src="../assets/image/mineimg/online.png" alt="">
+          <span class="big">在线客服</span>
+          <span class="small">24H服务</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="../assets/image/mineimg/card.png" alt="">
+          <span class="big">卡包</span>
+          <span class="small">途游卡</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="../assets/image/mineimg/safe.png" alt="">
+          <span class="big">安全中心</span>
+          <span class="small"></span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="../assets/image/mineimg/manage.png" alt="">
+          <span class="big">托管加盟</span>
+          <span class="small">房屋托管经营</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="../assets/image/mineimg/advice.png" alt="">
+          <span class="big">意见反馈</span>
+          <span class="small"></span>
         </a>
       </li>
     </ul>
 
+    <van-button class="zq" type="primary" size="large" round>我想当房东赚钱</van-button>
   </div>
 </template>
 
@@ -255,9 +319,53 @@ export default {
     height: 63px;
   }
 }
-.cygn {
-  width: 100%;
 
+.cygn {
+  width: 275px;
+  margin: 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  li {
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+      .big {
+        margin-top: 8px;
+        font-size: 12px;
+        color: #303030;
+      }
+      .small {
+        height: 10px;
+        font-size: 10px;
+        color: #999999;
+        margin-top: 5px;
+      }
+    }
+  }
+  .yb {
+    margin-right: none;
+  }
+}
+.zq {
+  width: 245px;
+  height: 38px;
+  margin-left: 64px;
+  color: #434343;
+  font-size: 14px;
+  background: #F4F5F7;
+  border: none;
 }
 
 </style>

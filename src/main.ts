@@ -34,9 +34,7 @@ import {
   Calendar,
   Card,
   Field,
-  Icon,
-  Grid,
-  GridItem
+  Icon
 } from "vant";
 
 const app = createApp(App)
@@ -63,8 +61,6 @@ app.use(Calendar)
 app.use(Card)
 app.use(Field)
 app.use(Icon)
-app.use(Grid)
-app.use(GridItem)
 app.use(router)
 app.use(store)
 app.mount('#app')
