@@ -1,7 +1,7 @@
 <template>
   <!-- 首页搜索框 -->
   <router-view></router-view>
-    <van-search v-model="value" placeholder="请输入搜索关键词" />
+   <index-detail></index-detail>
     <!-- 首页轮播图 -->
     <div>
      <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
@@ -12,13 +12,19 @@
     <adderss-menu></adderss-menu>
     <serve-menu></serve-menu>
     <pro-duct></pro-duct>
+    <cele-brity></cele-brity>
+    <sleep-list></sleep-list>
     </div>
 </template>
 
 <script>
 import AdderssMenu from './AdderssMenu.vue'
 import ServeMenu from './ServeMenu.vue'
-import ProDuct from '../components/ProDuct.vue';
+import ProDuct from '../components/ProDuct.vue'
+import IndexDetail from './IndexDetail.vue'
+import CeleBrity from '../components/CeleBrity.vue'
+import SleepList from '../components/SleepList.vue'
+
 export default {
    props: {
     autoplay: Number,
@@ -53,9 +59,12 @@ export default {
    };
  },
  components: {
-    AdderssMenu,
-   ServeMenu,
-  ProDuct
+  AdderssMenu,
+  ServeMenu,
+  ProDuct,
+  IndexDetail,
+  CeleBrity,
+  SleepList
  }
 }
 </script>

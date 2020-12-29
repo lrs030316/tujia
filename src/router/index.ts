@@ -16,50 +16,71 @@ const routes =[
       },
       {
         path: "/Country",
-        component: () => import("../views/Collect/collectList/Country.vue")
+        component: () => import("../views/Collect/CollectList/Country.vue")
       },
       {
         path: "/Calendar",
-        component: () => import("../views/Collect/collectList/Calendar.vue")
+        component: () => import("../views/Collect/CollectList/Calendar.vue")
       },
       {
         path: "/collect",
-        component: () => import('../views/Collect/index.vue'),
+        component: () => import('../views/Collect/Index.vue'),
         redirect: "/enshrine",
-        children: [
+        children: [ 
           {
             path: "/enshrine",
-            component: () => import('../views/Collect/headcollect.vue'),
-            redirect: "/house",
+            component: () => import('../views/Collect/Headcollect.vue'),
+            redirect: "/House",
             children: [
               {
-                path: "/house",
-                component: () => import('../views/Collect/collectList/house.vue')
+                path: "/House",
+                component: () => import('../views/Collect/CollectList/House.vue')
               },
               {
-                path: "/landlord",
-                component: () => import('../views/Collect/collectList/landlord.vue')
+                path: "/Landlord",
+                component: () => import('../views/Collect/CollectList/Landlord.vue')
               },
               {
-                path: "/ranking",
-                component: () => import('../views/Collect/collectList/ranking.vue')
+                path: "/Ranking",
+                component: () => import('../views/Collect/CollectList/Ranking.vue')
               },
               {
-                path: "/find",
-                component: () => import('../views/Collect/collectList/find.vue')
+                path: "/Find",
+                component: () => import('../views/Collect/CollectList/Find.vue')
               },
             ]
           },
           {
             path: "/browse",
-            component: () => import('../views/Collect/headbrowse.vue'),
+            component: () => import('../views/Collect/Headbrowse.vue'),
           }
         ]
       },
       { 
-        path: "/cart",
-        component: () => import("../views/Cart.vue"),
-        meta: { requieAlive: true }      
+        path: "/select",
+        component: () => import("../views/Find/Index.vue"),
+        children: [
+          {
+            path: "/Select",
+            component: ()=> import ("../views/Find/Findlist/Select.vue")
+          },
+          {
+            path: "/Hotlist",
+            component: ()=> import ("../views/Find/Findlist/Hotlist.vue")
+          },
+          {
+            path: "/Homestay",
+            component: ()=> import ("../views/Find/Findlist/Homestay.vue")
+          },
+          {
+            path: "/Parentsroom",
+            component: ()=> import ("../views/Find/Findlist/Parentsroom.vue")
+          },
+          {
+            path: "/Goout",
+            component: ()=> import ("../views/Find/Findlist/Goout.vue")
+          }
+        ]
       },
       {
         path: "/news",
