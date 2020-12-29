@@ -46,6 +46,7 @@ export default {
 .wrapp {
   padding:0 17px ;
   background: #fff;
+  width: 100%;
   .mate {
     width: 84px;
     font-size: 21px;
@@ -64,11 +65,13 @@ export default {
 
   }
   .discount {
+    width: 100%;
     height: 155px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     .ds-1{
+      width: 174px;
        position: relative;
       .day {
         width: 72px;
@@ -119,18 +122,20 @@ export default {
       
 
     
-    >img {
-      width: 165px;
-      height: 100%;
-      margin-right: 9px;
-     }
+      >img {
+        width: 165px;
+        height: 100%;
+        margin-right: 9px;
+      }
     }
     .ds-2{
+      width: 167px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
          .ds-2-1{
+           width: 100%;
            position: relative;
            .down {
                 position: absolute;
@@ -177,6 +182,7 @@ export default {
               }
          
          >img {
+           width: 100%;
              height: 75px;
           }
         }
@@ -187,6 +193,7 @@ export default {
             margin-top: 8px;
               
           >.ds-2-2-1{
+            width: 80px;
              position: relative;
              .day {
                 position: absolute;
@@ -220,6 +227,7 @@ export default {
                 border-radius: 5px;
               }
             >img{
+              width: 100%;
               height: 70px;
            } 
           }

@@ -53,12 +53,7 @@ export default defineComponent ({
 })
 </script>
 
-<style lang="less">
- * {
-   margin: 0;
-   padding: 0;
- }
-
+<style lang="less" scoped>
 .concent {
   position: absolute;
   top: 46px;
@@ -81,6 +76,7 @@ export default defineComponent ({
     border-bottom: 1px solid #F7F8FA;
     img {
       width: 47px;
+      height: 47px;
     }
   }
   .van-divider {

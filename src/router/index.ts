@@ -57,9 +57,8 @@ const routes =[
         ]
       },
       { 
-        path: "/cart",
-        component: () => import("../views/Find/index.vue"),
-        redirect: "/Select",
+        path: "/select",
+        component: () => import("../views/Find/Index.vue"),
         children: [
           {
             path: "/Select",
@@ -80,7 +79,7 @@ const routes =[
           {
             path: "/Goout",
             component: ()=> import ("../views/Find/Findlist/Goout.vue")
-          },
+          }
         ]
       },
       {

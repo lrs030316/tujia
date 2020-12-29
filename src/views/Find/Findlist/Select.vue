@@ -52,61 +52,61 @@ export default {
     height: 230px;
     margin-left: 19px;
     border: 1px solid #ccc;
-    
+    .list-img{
+      width: 100%;
+      height: 122px;
+    }
+    .list-1{
+      width: 100%;
+      height: 10px;
+      padding: 9px;
+    }
+    .list-1 img{
+      width: 8px;
+      height: 10px;
+    }
+    .list-1 span{
+      padding-left: 3px;
+      font-size: 10px;
+      color: #5C5C5C;
+    }
+    .list-2 {
+      width: 100%;
+      height: 28px;
+      span {
+        font-size: 12px;
+      }  
+    }
+    .list-2 img{
+      width: 12px;
+      height: 12px;
+    }
+    .list-2 .img-1{
+      padding-left: 8px;
+    }
+    .list-3{
+      display: flex;
+      flex-direction:row;
+      width: 100%;
+      height: 22px;
+      padding-top:18px;
+      
+    }
+    .list-3 img{
+      top: 12px;
+      width: 22px;
+      height: 22px;
+      padding-left: 8px ;
+    }
+    .list-3 span{
+      width: 44px;
+      height: 9px;
+      font-size: 6px;
+      line-height: 9px;
+      color: #111111;
+      margin-left: 4px;
+      margin-top:6px ;
+    }
   }
-  .list .list-img{
-    width: 100%;
-    height: 122px;
-  }
-  .list-1{
-    width: 100%;
-    height: 10px;
-    padding: 9px;
-  }
-  .list-1 img{
-    width: 8px;
-    height: 10px;
-  }
-  .list-1 span{
-    padding-left: 3px;
-    font-size: 10px;
-    color: #5C5C5C;
-  }
-  .list-2 {
-    width: 100%;
-    height: 28px;
-    span {
-      font-size: 12px;
-    }  
-  }
-  .list-2 img{
-    width: 12px;
-    height: 12px;
-  }
-  .list-2 .img-1{
-    padding-left: 8px;
-  }
-  .list-3{
-    display: flex;
-    flex-direction:row;
-    width: 100%;
-    height: 22px;
-    padding-top:18px;
-    
-  }
-  .list-3 img{
-    top: 12px;
-    width: 22px;
-    height: 22px;
-    padding-left: 8px ;
-  }
-  .list-3 span{
-    width: 44px;
-    height: 9px;
-    font-size: 6px;
-    line-height: 9px;
-    color: #111111;
-    margin-left: 4px;
-    margin-top:6px ;
-  }
+  
 </style>

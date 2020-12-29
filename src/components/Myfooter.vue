@@ -37,7 +37,7 @@ export default {
         {
           title: "发现",
           icon: "faxian",
-          to: "/cart",
+          to: "/select",
           dot: false
         },
         {
