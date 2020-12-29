@@ -123,6 +123,10 @@ const routes =[
   {
     path: '/register',
     component:() => import('../views/Register.vue')
+  },
+  {
+    path: '/commoninfo',
+    component:() => import('../views/mine/CommonInfo.vue')
   }
 
 ]

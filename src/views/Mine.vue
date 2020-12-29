@@ -3,8 +3,9 @@
     <div class="top">
       <img src="../assets/image/mineimg/topbg.png" alt="">
 
+      <!-- 登录注册入口 -->
       <div class="nc">
-        <span>遇见温柔风.</span>
+        <span>注册/登录</span>
         <a href="">
           <img src="../assets/image/mineimg/sz.png" alt="">
         </a>
@@ -25,6 +26,7 @@
         <img src="../assets/image/mineimg/bj.png" alt="">
       </div>
 
+      <!-- 头像 -->
       <div class="tx">
         <img src="../assets/image/mineimg/tx.png" alt="">
       </div>
@@ -57,88 +59,91 @@
       <img src="../assets/image/mineimg/banner.png" alt="">
     </div>
 
-    <ul class="cygn">
-      <li>
-        <a href="">
-          <img src="../assets/image/mineimg/content.png" alt="">
-          <span class="big">内容管理</span>
-          <span class="small">途中故事</span>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <img src="../assets/image/mineimg/see.png" alt="">
-          <span class="big">浏览历史</span>
-          <span class="small"></span>
-        </a>
-      </li>
-      <li class="yb">
-        <a href="">
-          <img src="../assets/image/mineimg/cyinfo.png" alt="">
-          <span class="big">常用信息</span>
-          <span class="small">入住人/地址</span>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <img src="../assets/image/mineimg/money.png" alt="">
-          <span class="big">开具发票</span>
-          <span class="small">历史发票</span>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <img src="../assets/image/mineimg/invite.png" alt="">
-          <span class="big">邀请好友</span>
-          <span class="small">邀请好友得奖励</span>
-        </a>
-      </li>
-      <li class="yb">
-        <a href="">
-          <img src="../assets/image/mineimg/online.png" alt="">
-          <span class="big">在线客服</span>
-          <span class="small">24H服务</span>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <img src="../assets/image/mineimg/card.png" alt="">
-          <span class="big">卡包</span>
-          <span class="small">途游卡</span>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <img src="../assets/image/mineimg/safe.png" alt="">
-          <span class="big">安全中心</span>
-          <span class="small"></span>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <img src="../assets/image/mineimg/manage.png" alt="">
-          <span class="big">托管加盟</span>
-          <span class="small">房屋托管经营</span>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <img src="../assets/image/mineimg/advice.png" alt="">
-          <span class="big">意见反馈</span>
-          <span class="small"></span>
-        </a>
-      </li>
-    </ul>
-
+    <div class="testbig">
+      <div class="test" v-for="(value,index) in tabs" :key="index">
+        <van-grid :border="false" :column-num="3" >
+          <van-grid-item :to="value.path">
+            <img :src="value.img" alt="" style="width:30px;height:30px;">
+          </van-grid-item>
+          <span class="big">{{value.name}}</span>
+          <span class="small" v-if="value.small">
+            {{ value.small }}
+          </span>
+        </van-grid>
+      </div>
+    </div>
+  
     <van-button class="zq" type="primary" size="large" round>我想当房东赚钱</van-button>
   </div>
 </template>
 
 <script>
 export default {
+
   data () {
     return {
-      
+      tabs: [
+        {
+          img: 'http://10.31.162.29:4000/mine/content.png',
+          name: '内容管理',
+          small: '途中故事',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/see.png',
+          name: '浏览历史',
+          small: '   ',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/info.png',
+          name: '常用信息',
+          small: '入住人/地址',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/money.png',
+          name: '开具发票',
+          small: '历史发票',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/invite.png',
+          name: '邀请好友',
+          small: '邀请好友得奖励',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/online.png',
+          name: '在线客服',
+          small: '24H服务',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/card.png',
+          name: '卡包',
+          small: '途游卡',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/safe.png',
+          name: '安全中心',
+          small: '    ',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/manage.png',
+          name: '托管加盟',
+          small: '房屋托管经营',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/advice.png',
+          name: '意见反馈',
+          small: '    ',
+          path: '/commoninfo'
+        }
+      ]
     };
   },
 
@@ -277,6 +282,7 @@ export default {
       margin-bottom: 8px;
     }
     span {
+
       font-family: PingFang-SC-Bold;
       font-size: 14px;
       color: #000;
@@ -320,33 +326,35 @@ export default {
   }
 }
 
-.cygn {
-  width: 275px;
-  margin: 0 50px;
+.testbig {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  li {
-    width: 90px;
+  padding: 0 50px;
+  flex-wrap: wrap;
+  margin: 0;
+  .test {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 16px;
-    a {
+    .van-grid {
       display: flex;
       flex-direction: column;
       align-items: center;
-      img {
+      .van-grid-item {
         width: 30px;
         height: 30px;
+        margin-bottom: 8px;
+        margin-top: 10px;
       }
       .big {
-        margin-top: 8px;
         font-size: 12px;
         color: #303030;
       }
       .small {
+        text-align: center;
+        width: 70px;
         height: 10px;
         font-size: 10px;
         color: #999999;
@@ -354,18 +362,18 @@ export default {
       }
     }
   }
-  .yb {
-    margin-right: none;
-  }
 }
+
+
+ 
+
 .zq {
   width: 245px;
   height: 38px;
   margin-left: 64px;
   color: #434343;
   font-size: 14px;
-  background: #F4F5F7;
+  background: #f4f5f7;
   border: none;
 }
-
 </style>
