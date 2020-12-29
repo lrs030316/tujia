@@ -100,12 +100,40 @@
   <div class="room_intro">
     <p>9四合院浪漫大床【荣小姐】故宫天安门南锣</p>
     <p>整套·1居1床2人·距后海/南锣鼓巷地区直线759米</p>
+    <ul class="discount">
+      <li>今日甩卖减239</li>
+      <li>超赞房东</li>
+      <li>近地铁</li>
+      <li>宽松取消</li>
+      <li>行李寄存</li>
+    </ul>
+    <ul class="price">
+      <li class="current_price">
+        <span>￥</span>
+        <span>397</span>
+      </li>
+      <li class="old_price">
+        <span>￥</span>
+        <span>596</span>
+      </li>
+      <li class="pink">
+        6.8折，天天特惠
+      </li>
+      <li class="last">
+        房量紧张
+      </li>
+    </ul>
   </div>
+  <!-- <div v-for="item in indexData" :key="item.id">
+    {{ item.img_rank }}
+  </div> -->
 </template>
 
 <script>
-import { ref, reactive } from "vue";
+import { ref, reactive, onMounted, computed } from "vue";
 import indexHeader from "../components/IndexHeader.vue";
+import { useStore } from "vuex";
+import store from '../store';
 
 export default {
   setup() {
@@ -140,6 +168,14 @@ export default {
     const com = () => {
       comment.value++;
     };
+
+    const store = useStore();
+
+    onMounted(() => {
+      store.dispatch("getIndexData")
+    })
+
+    const indexData = computed(() => store.state.IndexDetail.IndexDetailList)
     return {
       list,
       change,
@@ -151,6 +187,7 @@ export default {
       like,
       comment,
       com,
+      indexData
     };
   },
   components: {
@@ -191,10 +228,11 @@ export default {
       ]
     };
   },
+  
   methods: {
     onChange(index) {
       this.current = index;
-    },
+    }
   },
 };
 </script>
@@ -407,6 +445,74 @@ export default {
     text-align: center;
     margin-right: 20px;
     margin-bottom: 10px;
+  }
+}
+.room_intro {
+  margin-left: 20px;
+  p {
+    &:nth-of-type(1) {
+      margin-top: 13px;
+      margin-bottom: 9px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    &:nth-of-type(2) {
+      margin-top: 0;
+      margin-bottom: 11px;
+      font-size: 11px;
+      color: #666;
+    }
+  }
+  .discount {
+    display: flex;
+    justify-content: right;
+    font-size: 9px;
+    li {
+      margin-right: 10px;
+      background: rgba(253, 245, 226, .5);
+      color: #F09B56;
+      padding: 4px;
+      &:nth-of-type(1) {
+        background: rgba(232, 53, 70, .3);
+        color: #EB6964;
+      }
+    }
+  }
+  .price {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    li {
+      margin-right: 6px;
+    }
+    .current_price {
+      color: #F09B56;
+      span {
+        &:nth-of-type(1) {
+          font-size: 10px;
+        }
+        &:nth-of-type(2) {
+          font-size: 14px;
+        }
+      }
+    }
+    .old_price {
+      span {
+        font-size: 10px;
+        color: #666;
+      }
+    }
+    .pink {
+      background: #EB6761;
+      padding: 2px;
+      color: #fff;
+      border-radius: 10px;
+      font-size: 9px;
+    }
+    .last {
+      font-size: 11px;
+      color: #ED746F;
+    }
   }
 }
 </style>

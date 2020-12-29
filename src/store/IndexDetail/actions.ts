@@ -1,8 +1,8 @@
-import { getindexdetail } from "../../utils/api.js";
+import { getindexdetail } from "../../utils/api";
 
 export default {
-  getIndexDetail({ commit }) {
-    const res = getindexdetail();
-    commit("getindexdetail",res.result.)
+  async getIndexData({ commit }: any) {
+    const res: any = await getindexdetail();
+    commit("getindexdetail",res.result);
   }
 }
