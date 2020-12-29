@@ -6,11 +6,16 @@ import "amfe-flexible"
 import 'vant/lib/index.css'
 import '../public/iconfont/iconfont.css'
 import './assets/css/style.css'
+import './assets/css/reset.css'
+import './assets/xypiconfont/iconfont.css'
+import './assets/image/minefont/iconfont.css'
 import router from './router/index'
 import store from './store/index'
 
 import {
+  Button,
   NavBar,
+  Image as VanImage,
   Empty,
   Swipe,
   SwipeItem,
@@ -23,21 +28,26 @@ import {
   CouponCell,
   CouponList,
   Tag,
+  Icon,
+  Grid,
+  GridItem,
+  Skeleton,
   Search,
   Tabbar,
   TabbarItem,
   DropdownMenu, 
   DropdownItem,
   Calendar,
+  Field,
   Card,
-  Button,
   Tab,
   Tabs
 } from "vant";
 
-import {  } from 'vant';
 const app = createApp(App)
+app.use(Button)
 app.use(NavBar)
+app.use(VanImage);
 app.use(Empty)
 app.use(Swipe)
 app.use(SwipeItem)
@@ -50,17 +60,23 @@ app.use(Popup)
 app.use(CouponCell)
 app.use(CouponList)
 app.use(Tag)
+app.use(Icon);
+app.use(Skeleton);
+app.use(Card);
 app.use(Search)
 app.use(Tabbar)
 app.use(TabbarItem)
 app.use(DropdownMenu)
 app.use(DropdownItem)
 app.use(Calendar)
+app.use(Field)
+app.use(Icon)
+app.use(GridItem)
 app.use(Card)
 app.use(Button)
 app.use(Tab)
 app.use(Tabs)
-
+app.use(Grid)
 app.use(router)
 app.use(store)
 app.mount('#app')

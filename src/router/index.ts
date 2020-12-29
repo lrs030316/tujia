@@ -56,11 +56,9 @@ const routes =[
           }
         ]
       },
-      
-      {
-        path: "/cart",
-        component: () => import("../views/Find/index.vue"),
-        redirect: "/Select",
+      { 
+        path: "/select",
+        component: () => import("../views/Find/Index.vue"),
         children: [
           {
             path: "/Select",
@@ -81,7 +79,7 @@ const routes =[
           {
             path: "/Goout",
             component: ()=> import ("../views/Find/Findlist/Goout.vue")
-          },
+          }
         ]
       },
       {
@@ -96,24 +94,37 @@ const routes =[
       }
     ]
   },
-  // { path: '/acessalbum',
-  //   component:() => import('../views/AcessAlbum.vue')
-  // },
-  // { path: '/findditail',
-  //   component:() => import('../views/FindDitail.vue')
-  // },
-  // { path: '/housedetail',
-  //   component:() => import('../views/HouseDetail.vue')
-  // },
-  // { path: '/mouse',
-  //   component:() => import('../views/Mouse.vue')
-  // },
-  // { path: '/photograph',
-  //   component:() => import('../views/Photograph.vue')
-  // },
+  { path: '/acessalbum',
+    component:() => import('../views/AcessAlbum.vue')
+  },
+  { path: '/findditail',
+    component:() => import('../views/FindDitail.vue')
+  },
+  { path: '/housedetail',
+    component:() => import('../views/HouseDetail.vue')
+  },
+  { path: '/mouse',
+    component:() => import('../views/Mouse.vue')
+  },
+  { path: '/photograph',
+    component:() => import('../views/Photograph.vue')
+  },
+  {
+    path: '/indexdetail',
+    component: () => import('../views/IndexDetail.vue')
+  },
   { path: '/:catchAll(.*)',
     component:() => import('../views/Photograph.vue')
+  },
+  {
+    path: '/login',
+    component:() => import('../views/Login.vue')
+  },
+  {
+    path: '/register',
+    component:() => import('../views/Register.vue')
   }
+
 ]
 
 const router = createRouter({

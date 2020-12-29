@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="houtui" unicode="&#58913;" d="M377.052 384l386.307 388.203-58.23 58.507-444.49-446.71 444.49-446.709 58.23 58.507-386.307 388.202zM377.052 384z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="zhijiao-triangle" unicode="&#58962;" d="M71.675-66l-9.675 900 890.325-900z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="xiala" unicode="&#58936;" d="M698.624 486.496l-165.824-220.032c-10.464-13.856-27.968-14.08-38.752 0l-168.512 220.032c-10.88 14.208-5.216 25.504 12.448 25.504h347.904c17.792 0 23.36-11.424 12.736-25.504z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

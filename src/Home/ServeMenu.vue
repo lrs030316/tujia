@@ -1,7 +1,8 @@
 <template>
+  <div class="product">
   <div class="serve-menu">
       <div class="member">
-        <i></i>
+        <i><img src="../../syimg/mm1.png" alt=""></i>
         <p>周三会员日，99元全国随心住</p>
         <div class="coupon">立即抢</div>
       </div>
@@ -11,11 +12,12 @@
           v-for="(item,index) in title"
           :key="index"
           >
-          <!-- <img :src="item.imgUrl" alt=""> -->
-          {{ item.nam}}
+          <img :src="item.imgUrl" alt="">
+          <span>{{ item.nam}}</span>
           </li>
         </ul>
       </div>
+    </div>
     </div>
 </template>
 
@@ -25,77 +27,93 @@ export default {
    return {
      title:[
        {
-         
+         imgUrl:"../../syimg/mn1.png",
          nam:"天天特惠"
        },
        {
-         
+         imgUrl:"../../syimg/mn2.png",
          nam:"会员日"
        },
        {
-         
+         imgUrl:"../../syimg/mn3.png",
          nam:"超值好房"
        },
        {
-         
+         imgUrl:"../../syimg/mn4.png",
          nam:"每周上新"
        },
        {
-         
+         imgUrl:"../../syimg/mn5.png",
          nam:"实拍美屋"
        },
        {
-         
+         imgUrl:"../../syimg/mn6.png",
          nam:"新奇体验"
        },
        {
-        
+        imgUrl:"../../syimg/mn7.png",
          nam:"品牌民宿"
        },
        {
-         
+         imgUrl:"../../syimg/mn8.png",
          nam:"精挑细选"
        },
        {
-         
+         imgUrl:"../../syimg/mn9.png", 
          nam:"浪漫约会"
        },
        {
-         
+         imgUrl:"../../syimg/mn10.png",
          nam:"整套出租"
        }
      ]
    };
  },
+ components: {
+ }
 
 };
 </script>
 <style lang='less' scoped>
+.product {
+  padding-top:100px ;
 .serve-menu{
   padding: 0 18px ;
   height:230px;
-  background: green;
-  padding-top:110px ;
- 
-  .member{
+  background: #fff;
+  .member{   
     height: 50px;
-    border-radius:10px;
-    // margin-top: 110px;
+    background: #FBF1F1;
+    border-radius: 6px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background: pink;
+    img {
+      width: 46px;
+      height: 46px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 500;     
+      color: #4E2824;
+    }
     .coupon{
-      width: 60px;
-      height: 20px;
+      width: 55px;
+      height: 21px;
+      background: #EC706B;
       border-radius: 10px;
-       background: red;
+      font-size: 13px;
+      text-align: center;
+      font-weight: 500;
+      color: #FFFFFF;
+      line-height: 21px;
     }
   }
   .shoping-menu{
+    margin-top: 27px;
     height: 164px;
     width: 100%;
-    background: grey;
+    background: #fff;
     .menu{
      height: 100%;
      width: 100%;
@@ -103,13 +121,23 @@ export default {
      justify-content: space-around;
      flex-wrap: wrap;
      li{
-       height: 50%;
        width: 20%;
        display: flex;
+       flex-direction: column;
        align-items: center;
-       justify-content: center;
+       justify-content: space-evenly;
+       font-size: 11px;
+       padding: 10px 0;
+       font-weight: 500;
+       color: #000000;
+       img {
+         width: 32px;
+         height: 32px;
+       }
+
      }
     }
   }
+ }
 }
 </style>
