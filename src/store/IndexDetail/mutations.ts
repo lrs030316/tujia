@@ -1,5 +1,5 @@
 export default {
-  getindexdetail(state) {
-    state.IndexDetailList 
+  getindexdetail(state: any, payload: any) {
+    state.IndexDetailList = payload;
   }
 }

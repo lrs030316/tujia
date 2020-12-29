@@ -50,14 +50,14 @@ instance.interceptors.response.use(
 // --------------------------------------------------------
 
 const http = {
-  get(url, params) {
+  get(url: any, params: any) {
     return new Promise((resolve, reject) => {
       return instance
         .get(url, {
           params: params || {}
         })
         .then(res => {
-          if (res.status === "0") {
+          if (res.status === 0) {
             resolve(res);
           } else {
             console.log(res.msg);
@@ -69,12 +69,12 @@ const http = {
         });
     });
   },
-  post(url, params) {
+  post(url: any, params: any) {
     return new Promise((resolve, reject) => {
       return instance
         .post(url, params)
         .then(res => {
-          if (res.status === "0") {
+          if (res.status === 0) {
             resolve(res);
           } else {
             console.log(res.msg);
