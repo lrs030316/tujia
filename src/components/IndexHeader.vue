@@ -45,6 +45,7 @@ export default {
 </script>
 <style lang="less" scoped>
 header {
+  z-index: 2000;
   width: 100%;
   padding-top: 10px;
   padding-bottom: 17px;
