@@ -9,11 +9,11 @@
       <img class="img-1" :src="imgUra" alt="" ><span>江浙沪周边游<img :src="imgUrb" alt="">绝美小众景点</span>
     </div>
     <div class="list-3">
-      <img :src="imgUrc" alt="">
-      <span>Dyxn6636</span>
+      <img class="list-3img" :src="imgUrc" alt="">
+      <span class="list-3text">Dyxn6636</span>
       <div class="praise">
-        <img :src="imgUrd" alt="">
-        <span>162</span>
+        <img class="praiseimg" :src="imgUrd" alt="">
+        <span class="praisespan">162</span>
       </div>
     </div>
   </div>
@@ -71,18 +71,18 @@ export default {
       color: #5C5C5C;
     }
     .list-2 {
-      width: 100%;
+      width: 95%;
       height: 28px;
+      margin-left: 7px;
+      margin-top:8px ;
       span {
         font-size: 12px;
+        
       }  
     }
     .list-2 img{
       width: 12px;
       height: 12px;
-    }
-    .list-2 .img-1{
-      padding-left: 8px;
     }
     .list-3{
       display: flex;
@@ -92,13 +92,13 @@ export default {
       padding-top:18px;
       
     }
-    .list-3 img{
+    .list-3 .list-3img{
       top: 12px;
       width: 22px;
       height: 22px;
-      padding-left: 8px ;
+      margin-left: 8px ;
     }
-    .list-3 span{
+    .list-3 .list-3text{
       width: 44px;
       height: 9px;
       font-size: 6px;
@@ -106,6 +106,22 @@ export default {
       color: #111111;
       margin-left: 4px;
       margin-top:6px ;
+    }
+    .praise{
+      width: 37px;
+      height: 22px;
+      margin-left: 39px;
+    }
+    .praise .praiseimg{
+      width: 22px;
+      height: 22px;
+    }
+    .praise .praisespan{
+      // float: left;
+      width: 10px;
+      height: 7px;
+      margin-bottom: 9px;
+      font-size: 2px;
     }
   }
   
