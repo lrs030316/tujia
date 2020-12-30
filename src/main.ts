@@ -28,7 +28,6 @@ import {
   CouponCell,
   CouponList,
   Tag,
-  Icon,
   Grid,
   GridItem,
   Skeleton,
@@ -39,6 +38,7 @@ import {
   DropdownItem,
   Calendar,
   Field,
+  Icon,
   Card,
   Tab,
   Tabs
@@ -47,7 +47,7 @@ import {
 const app = createApp(App)
 app.use(Button)
 app.use(NavBar)
-app.use(VanImage);
+app.use(VanImage)
 app.use(Empty)
 app.use(Swipe)
 app.use(SwipeItem)
@@ -60,9 +60,9 @@ app.use(Popup)
 app.use(CouponCell)
 app.use(CouponList)
 app.use(Tag)
-app.use(Icon);
-app.use(Skeleton);
-app.use(Card);
+app.use(Icon)
+app.use(Skeleton)
+app.use(Card)
 app.use(Search)
 app.use(Tabbar)
 app.use(TabbarItem)
@@ -70,13 +70,10 @@ app.use(DropdownMenu)
 app.use(DropdownItem)
 app.use(Calendar)
 app.use(Field)
-app.use(Icon)
-app.use(GridItem)
-app.use(Card)
-app.use(Button)
 app.use(Tab)
 app.use(Tabs)
 app.use(Grid)
+app.use(GridItem)
 app.use(router)
 app.use(store)
 app.mount('#app')
