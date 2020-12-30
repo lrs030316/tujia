@@ -1,17 +1,17 @@
 <template>
      <div class="locate">
-        <p>泰国</p> <div class="locate-g"><p>当前位置</p><img src="../../syimg/sy2.png" alt=""></div>
+        <p>泰国</p> <div class="locate-g"><p>当前位置</p><img src="../assets/syimg/sy2.png" alt=""></div>
       </div>
       <div class="wrapp">
       <div class="date">
-        <div class="date-1"><span class="item">入住</span><span class="itemv">12月7日</span ></div><div class="date-1"><span class="item">离店</span><span class="itemv">12月8日</span></div><div class="date-1"><span class="item">入数</span><span class="itemv">不限</span></div>
+        <div class="date-1"><span class="item">入住</span><span class="itemv">12月31日</span ></div><div class="date-1"><span class="item">离店</span><span class="itemv">1月1日</span></div><div class="date-1"><span class="item">入数</span><span class="itemv">不限</span></div>
       </div>
       <p class="search ms">关键字/位置/民宿名</p>
       <p class="search"><span>芭提雅</span><span>曼谷/月宫/普吉岛</span><span>大佛塔</span></p>
       <p class="search"><span>玉佛寺/湄南河</span><span>金沙岛</span><span>大皇宫</span></p>
       <div class="search-button">开始搜索</div>
       </div>
-      <div class="serves"><i><img src="../../syimg/sy3.png" alt=""></i><p>信用住.先住后付</p><i><img src="../../syimg/fy.png" alt=""></i><p>24小时客服</p><i><img src="../../syimg/kf.png" alt=""></i><p>房源房东真实认证</p></div>
+      <div class="serves"><i><img src="../assets/syimg/sy3.png" alt=""></i><p>信用住.先住后付</p><i><img src="../assets/syimg/fy.png" alt=""></i><p>24小时客服</p><i><img src="../assets/syimg/kf.png" alt=""></i><p>房源房东真实认证</p></div>
       <div class="stage">全国旅游投诉平台:www.12301.cn</div>
 </template>
 

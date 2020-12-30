@@ -4,7 +4,7 @@
        <div class="table-menu">
           <div tabindex="1" onclick="true" class="table item-1" @click="handeleClick(1)" >国内.港澳台</div>
           <div tabindex="1" class="table " @click="handeleClick(2)">海外 </div>
-          <div tabindex="1" class="table item-2" @click="handeleClick(3)" ><i><img src="../../syimg/sy1.png" alt=""></i> 特价</div>
+          <div tabindex="1" class="table item-2" @click="handeleClick(3)" ><i><img src="../assets/syimg/sy1.png" alt=""></i> 特价</div>
       </div>
                
       <keep-alive>

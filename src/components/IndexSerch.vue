@@ -1,30 +1,30 @@
 <template>
 <div class="tricle">
   <header>
-      <span class="iconfont icon-houtui" @click="back"></span>
+      <!-- <span class="iconfont icon-houtui" @click="back"></span> -->
       <div class="put">
         <div class="put-left">
-          <div class="location">
-            {{ loca }}
+          <div @click="goToCities" class="location">
+            {{ city.name }}
           </div>
           <div class="time">
             <div>
               <span class="enter-leave">住</span>
-              <span class="date">12.08</span>
+              <span class="date">12.31</span>
             </div>
             <div>
               <span class="enter-leave">离</span>
-              <span class="date">12.09</span>
+              <span class="date">01.01</span>
             </div>
           </div>
         </div>
         <input
           type="text"
           class="put-right"
-          placeholder="搜索北京的景点、地标、房源"
+          placeholder= "搜索目的地的景点、地标、房源"
         />
       </div>
-      <img src="../../syimg/mp.png" alt="" />
+      <img src="../assets/syimg/mp.png" alt="" />
       <span class="text">地图</span>
      </header>
     </div>
@@ -42,7 +42,18 @@ export default {
       router.push("/index");
     };
     return { loca, back };
-  }
+  },
+  computed:{
+    city() {
+      return this.$store.state.city;
+    }
+ },
+ methods: {
+   goToCities() {
+     this.$router.push("/cities");
+     
+   }
+ }
 };
 </script>
 <style lang="less" scoped>

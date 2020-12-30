@@ -6,24 +6,24 @@
      <div class="ds-1">
        <span class="day">#必睡精选#</span>
        <span class="house">致敬设计师，优选pro美宿大赏</span>
-       <img src="../../syimg/wh1.png" alt="">
+       <img src="../assets/syimg/wh1.png" alt="">
      </div>
      <div class="ds-2">
        <div class="ds-2-1">
           <span class="count item">住入惊喜夜</span>
-         <img src="../../syimg/wh2.png" alt="">
+         <img src="../assets/syimg/wh2.png" alt="">
        </div>
        <div class="ds-2-1">
           <span class="count">必睡精选</span>
-         <img src="../../syimg/wh3.png" alt="">
+         <img src="../assets/syimg/wh3.png" alt="">
        </div>
        <div class="ds-2-1">
           <span class="count">小众秘境</span>
-         <img src="../../syimg/wh4.png" alt="">
+         <img src="../assets/syimg/wh4.png" alt="">
        </div>
        <div class="ds-2-1">
           <span class="count">去逛逛></span>
-         <img src="../../syimg/wh5.png" alt="">
+         <img src="../assets/syimg/wh5.png" alt="">
        </div>  
    </div>
   </div>

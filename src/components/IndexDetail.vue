@@ -23,7 +23,7 @@
           placeholder="搜索北京的景点、地标、房源"
         />
       </div>
-      <img src="../../syimg/bs.png" alt="" />
+      <img src="../assets/syimg/bs.png" alt="" />
       <span class="text">地图</span>
   </header>
 </template>
