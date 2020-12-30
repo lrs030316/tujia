@@ -1,7 +1,7 @@
 <template>
   <div class="headbox">
-    <router-link to="enshrine">我的收藏</router-link>
-    <router-link to="browse">浏览历史</router-link>
+    <router-link to="enshrine" >我的收藏</router-link>
+    <router-link to="browse" >浏览历史</router-link>
   </div>
   <router-view></router-view>
 </template>
@@ -17,6 +17,8 @@ export default {
   .headbox {
     margin: 20px 0 20px;
     display: flex;
+    width: 100%;
+    height: 30px;
     align-items: center;
     justify-content: center;
     a {

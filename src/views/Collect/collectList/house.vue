@@ -1,15 +1,10 @@
 <template>
   <header class="house">
-    <!-- <van-dropdown-menu>
-      <van-dropdown-item v-model="state.value1" :options="option1" />
-    </van-dropdown-menu>
-    <div>
-      <van-cell title="" :value="date" @click="show = true" />
-      <van-calendar v-model:show="show" type="range" @confirm="onConfirm" />
-    </div> -->
     <div class="titleTo">
       <div class="buttonTo" @click="country">全部城市</div>
-      <div class="buttonTo" @click="calendar">shijian</div>
+      <img src="../../../assets/imgers/Collect/stop.png" alt="">
+      <div class="buttonto" @click="calendar">12.31-1.1</div>
+      <img src="../../../assets/imgers/Collect/stop.png" alt="">
     </div>
   </header>
   <main>
@@ -20,9 +15,6 @@
 <script lang="ts">
 import { useRouter } from 'vue-router';
 import swipeHouse from '../../../components/SwipeHouse.vue';
-
-// import { reactive } from 'vue';
-// import { ref } from 'vue';
 
 export default {
   
@@ -39,30 +31,6 @@ export default {
       Calendar,
       
     }
-    
-  //   const state = reactive({
-  //     value1: 0,
-  //   });
-  //   const option1 = [
-  //     { text: '全部城市', value: 0 },
-  //     { text: '北京', value: 1 },
-  //   ]; 
-  //   const date = ref('');
-  //   const show = ref(false);
-
-  //   const formatDate = (date) => `${date.getMonth() + 1}/${date.getDate()}`;
-  //   const onConfirm = (date1) => {
-  //   const [start, end] = date1;
-  //     show.value = false;
-  //     date.value = `${formatDate(start)} - ${formatDate(end)}`;
-  //   };
-  //   return {
-  //     state,
-  //     option1,
-  //     date,
-  //     show,
-  //     onConfirm,
-  //   };
   },
   components: {
     swipeHouse
@@ -71,7 +39,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "../../../assets/less/collect.less";
+// @import "../../../assets/less/collect.less";
 .van-dropdown-menu__title {
   color: red;
 }
@@ -83,7 +51,7 @@ export default {
     background-color: #39a9ed;
   }
   header{
-    height: 48px;
+    height: 36px;
   }
   header .van-dropdown-menu{
     width: 20%;
@@ -93,5 +61,29 @@ export default {
     width: 20%;
     float: left;
     font-size: 12px;
-  }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+  }
+  .titleTo{
+    position: relative;
+    width: 100%;
+    height: 22px;
+    margin-left: 19px;
+  }
+  .titleTo .buttonTo{
+    width: 53px;
+    height: 13px;
+    font-size: 13px;
+    float: left;
+  }
+  .titleTo img{
+    float: left;
+    width: 22px;
+    height: 22px;
+  }
+  .titleTo .buttonto {
+    margin-left: 22px;
+    width: 69px;
+    height: 10px;
+    font-style: 10px;
+    float: left;
+  }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 </style>

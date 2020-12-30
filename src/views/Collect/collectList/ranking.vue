@@ -2,13 +2,19 @@
   <van-empty 
     description="暂无收藏" 
     class="custom-image"
-    image="../../../assets/imgers/Collect/empty.png">
+    :image="imgp">
     <van-button round type="danger" class="bottom-button">随便逛逛</van-button>
   </van-empty>
 </template>
 
-<script lang="ts">
+<script >
+import imgp from '../../../assets/imgers/Collect/empty.png';
 export default {
+  data() {
+    return{
+      imgp:imgp
+    }
+  },
 
 }
 </script>

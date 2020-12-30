@@ -60,7 +60,7 @@ const http = {
           if (res.status === 0) {
             resolve(res);
           } else {
-            console.log(res.msg);
+            console.log(res);
           }
         })
         .catch(err => {
@@ -77,7 +77,7 @@ const http = {
           if (res.status === 0) {
             resolve(res);
           } else {
-            console.log(res.msg);
+            console.log(res);
           }
         })
         .catch(err => {

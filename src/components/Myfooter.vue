@@ -1,7 +1,7 @@
 <template>
  <!-- 底部菜单栏 -->
  <div class="footer">
-    <van-tabbar  v-model="active" route :placeholder="true">
+    <van-tabbar  v-model="active" route :placeholder="true" :fixed='true'>
       <van-tabbar-item
         v-for="item in tabbarList"
         :key="item.title"

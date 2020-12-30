@@ -34,19 +34,19 @@ const routes =[
             children: [
               {
                 path: "/House",
-                component: () => import('../views/Collect/CollectList/House.vue')
+                component: () => import('../views/Collect/CollectList/house.vue')
               },
               {
                 path: "/Landlord",
-                component: () => import('../views/Collect/CollectList/Landlord.vue')
+                component: () => import('../views/Collect/CollectList/landlord.vue')
               },
               {
                 path: "/Ranking",
-                component: () => import('../views/Collect/CollectList/Ranking.vue')
+                component: () => import('../views/Collect/CollectList/ranking.vue')
               },
               {
                 path: "/Find",
-                component: () => import('../views/Collect/CollectList/Find.vue')
+                component: () => import('../views/Collect/CollectList/find.vue')
               },
             ]
           },
@@ -59,6 +59,7 @@ const routes =[
       { 
         path: "/select",
         component: () => import("../views/Find/Index.vue"),
+        redirect: "/Select",
         children: [
           {
             path: "/Select",
