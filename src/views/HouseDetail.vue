@@ -2,10 +2,6 @@
   <!-- 幻灯片效果 -->
   <div class="lunbo">
     <van-swipe @change="onChange" :height="250">
-      <!-- <van-swipe-item>1</van-swipe-item>
-      <van-swipe-item>2</van-swipe-item>
-      <van-swipe-item>3</van-swipe-item>
-      <van-swipe-item>4</van-swipe-item> -->
       <van-swipe-item v-for="item in swiperList" :key="item">
         <img :src="item" alt="">
       </van-swipe-item>
