@@ -1,7 +1,7 @@
  
  import { createStore } from 'vuex'
  import IndexDetail from './IndexDetail'
- import HouseDetail from './HouseDetail'
+//  import HouseDetail from './HouseDetail'
 
  // create new store instance
  const store = createStore({
@@ -13,8 +13,8 @@
     cityId:300100 }
    },
    modules: {  
-     IndexDetail,
-     HouseDetail 
+     IndexDetail
+    //  HouseDetail 
    },
    mutations: {
     changeCity(state,payload){
