@@ -1,5 +1,4 @@
 <template>
-<div class="tricle">
   <header>
       <span class="iconfont icon-houtui" @click="back"></span>
       <div class="put">
@@ -24,10 +23,9 @@
           placeholder="搜索北京的景点、地标、房源"
         />
       </div>
-      <img src="../../syimg/mp.png" alt="" />
+      <img src="../assets/syimg/bs.png" alt="" />
       <span class="text">地图</span>
-     </header>
-    </div>
+  </header>
 </template>
 
 <script>
@@ -46,17 +44,16 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.tricle{
- position: sticky;
- z-index: 9999;
- top: 0px;
 header {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  z-index: 2000;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 17px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  
+  position: fixed;
+  background: #fff;
   .icon-houtui {
     font-size: 25px;
   }
@@ -98,7 +95,7 @@ header {
     input::-webkit-input-placeholder {
       font-size: 10px;
       text-align: center;
-      color: #000000;
+      color: #909090;
     }
     .put-right {
       flex: 1;
@@ -115,6 +112,5 @@ header {
   .text {
     font-size: 12px;
   }
- }
 }
 </style>

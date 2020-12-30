@@ -22,3 +22,14 @@
  .van-tabbar-item__text {
    font-size: 14px;
  }
+ .van-cell__value {
+   flex: 5;
+   text-align: center;
+   margin-right: 27px;
+   font-size: 18px;
+   color: orangered;
+ }
+ .van-cell__title {
+   flex: 3;
+   color: rgb(245, 90, 33);
+ }

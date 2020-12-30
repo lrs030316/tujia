@@ -1,10 +1,11 @@
 <template>
-  <div>
-    <van-nav-bar title="发现">
-      <template #right>
-        <van-icon name="search" size="18" />
-      </template>
-    </van-nav-bar>
+  <div class="findhead">
+    <div class="findhead1">
+      <h2>发现</h2>
+      <div class="anniu">杭州</div>
+      <img src="../../assets/imgers/Find/stop.png" alt="">
+    </div>
+    <img class="findhead2" src="../../assets/imgers/Find/find.png" alt="">
   </div>
   <div class="indeximg">
     <van-swipe :autoplay="3000" lazy-render >
@@ -58,5 +59,40 @@ export default {
   }
   .van-swipe__indicators {
     bottom: 10%;
+  }
+  .findhead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 30px;
+    width: 100%;
+    margin-top: 22px;
+  }
+  .findhead .findhead1{
+    width: 100%;
+    height: 30px;
+    align-self: flex-start;
+  }
+  .findhead .findhead1 h2{
+    margin: 3px 8px 4px 18px;
+    width: 46px;
+    height: 23px;
+    font-size: 20px;
+  }
+  .findhead .findhead1 .anniu{
+    width: 49px;
+    height: 12px;
+    margin-top: 13px;
+    margin-bottom: 6px;
+  }
+ .findhead .findhead1 img{
+   width: 22px;
+   height: 22px;
+   margin-top: 13px;
+ } 
+  .findhead .findhead2{
+    width: 22px;
+    height: 22px;
+    margin-right: 19px;
   }
 </style>

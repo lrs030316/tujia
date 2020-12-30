@@ -4,25 +4,25 @@
      <p class="sm-mate">10秒找到心仪名宿</p>
      <div class="kd">
        <div class="kd-mate">
-       <img src="../../syimg/bs1.png" alt="">
+       <img src="../assets/syimg/bs1.png" alt="">
        <span class="v-mate">#北京民宿口碑榜</span>
-        <div class="num-star"><img class="star" src="../../syimg/bs2.png" alt="">
+        <div class="num-star"><img class="star" src="../assets/syimg/bs2.png" alt="">
         <span class="text">488</span>
         </div>
       </div>
     </div>
    <div class="discount">
      <div class="ds-1">
-       <span class="house"><img src="../../syimg/bs6.png" alt=""><div class="text">33012正在关注</div></span>
-       <img src="../../syimg/bs3.png" alt="">
+       <span class="house"><img src="../assets/syimg/bs6.png" alt=""><div class="text">33012正在关注</div></span>
+       <img src="../assets/syimg/bs3.png" alt="">
      </div>
      <div class="ds-2">
        <div class="ds-2-1">
           <span class="count item"></span>
-         <img src="../../syimg/bs4.png" alt="">
+         <img src="../assets/syimg/bs4.png" alt="">
        </div>
        <div class="ds-2-1">
-         <img src="../../syimg/bs5.png" alt="">
+         <img src="../assets/syimg/bs5.png" alt="">
        </div> 
    </div>
   </div>

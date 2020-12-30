@@ -125,6 +125,10 @@ const routes =[
     component:() => import('../views/Register.vue')
   },
   {
+    path: '/cities',
+    component:() => import('../Home/Cities.vue')
+  },
+  {
     path: '/commoninfo',
     component:() => import('../views/mine/CommonInfo.vue')
   }

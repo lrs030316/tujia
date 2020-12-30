@@ -41,7 +41,9 @@ import {
   Icon,
   Card,
   Tab,
-  Tabs
+  Tabs,
+  SubmitBar,
+  Toast
 } from "vant";
 
 const app = createApp(App)
@@ -74,6 +76,8 @@ app.use(Tab)
 app.use(Tabs)
 app.use(Grid)
 app.use(GridItem)
+app.use(SubmitBar)
+app.use(Toast)
 app.use(router)
 app.use(store)
 app.mount('#app')
