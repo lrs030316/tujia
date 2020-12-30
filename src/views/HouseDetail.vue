@@ -2,10 +2,13 @@
   <!-- 幻灯片效果 -->
   <div class="lunbo">
     <van-swipe @change="onChange" :height="250">
-      <van-swipe-item>1</van-swipe-item>
+      <!-- <van-swipe-item>1</van-swipe-item>
       <van-swipe-item>2</van-swipe-item>
       <van-swipe-item>3</van-swipe-item>
-      <van-swipe-item>4</van-swipe-item>
+      <van-swipe-item>4</van-swipe-item> -->
+      <van-swipe-item v-for="item in swiperList" :key="item">
+        <img :src="item" alt="">
+      </van-swipe-item>
       <template #indicator>
         <div class="custom-indicator">{{ current + 1 }}/4</div>
       </template>
@@ -328,8 +331,18 @@ export default defineComponent ({
             }
           ],
         }
-      ]
+      ],
+      swiperList: []
     }
+  },
+  mounted() {
+    fetch("https://www.fastmock.site/mock/56ac486d6b6a55c0e64980b06dbd0f0b/tujia/house/details")
+      .then(response => response.json())
+      .then(res => {
+        if (res.status === 0) {
+          this.swiperList = res.result[0].imgurl;
+        }
+      })
   },
   setup() {
     // 轮播
