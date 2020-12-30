@@ -40,7 +40,15 @@
       </van-tag>
       <van-action-sheet v-model:show="show" title="标签说明">
         <ul class="content">
-          <li>内容</li>
+          <li>
+            <van-tag
+              text-color="#FFC193"
+              @click="show = true"
+            >
+              优选PRO
+            </van-tag>
+            内容
+          </li>
           <li>内容</li>
           <li>内容</li>
           <li>内容</li>
@@ -87,11 +95,13 @@
         style="height: 90%; padding-top: 4px;"
       >
         <van-coupon-list
+          enabled-title="红包"
+          disabled-title=" "
+          :show-close-button="false"
+          :show-exchange-bar="false"
+          :show-count="false"
           :coupons="state.coupons"
           :chosen-coupon="state.chosenCoupon"
-          :disabled-coupons="disabledCoupons"
-          @change="onChange"
-          @exchange="onExchange"
         />
       </van-popup>
       <span class="choose" @click="state.showList = true">可领取</span>
@@ -99,7 +109,7 @@
     </div>
 
     <!-- 日期选择 -->
-    <van-cell to="houseDetail" class="day" >
+    <van-cell to="houseDetail" class="day" @click="showTime = true">
       <template #title>
         <span>
           <span class="c-g">12月23日</span>
@@ -114,6 +124,13 @@
         </span>
       </template>    
     </van-cell>
+    <van-calendar
+      v-model:show="showTime"
+      type="range"
+      @confirm="onConfirm"
+      :formatter="formatter"
+      color="#EA8D16"
+    />
     <van-divider />
     <!-- 详细信息 -->
     <van-card>
@@ -183,28 +200,54 @@
 
   <div class="space"></div>
 
-    <h2>房屋设施</h2>
-    <van-divider
-      :style="{ borderColor: '#F7F7F7',margin: '0' }"
-      :hairline="false"
-    ></van-divider>
-    <div class="facilities">
-      <van-cell title="房东说“鸟声落檐间，竹色在户外。有人说，来北京..”" is-link value="更多" />
-      <ul>
-        <li>dadqe
-          <div></div>
-          <div></div>
-        </li>
-      </ul>
-    </div>
-    
+  <!-- 房屋设施 -->
+  <h2>房屋设施</h2>
+  <van-divider
+    :style="{ borderColor: '#F7F7F7',margin: '0' }"
+    :hairline="false"
+  ></van-divider>
+  <div class="facilities">
+    <van-cell title="房东说“鸟声落檐间，竹色在户外。有人说，来北京..”" is-link value="更多" />
+    <ul>
+      <li v-for="(item, index) in facList" :key="index">
+        <div>{{ item.title }}</div>
+        <div class="fac-right">
+          <div v-if="index === index" v-for="(item2, index2) in item.baseList" :key="index2">
+            <img :src="item2.imgurl" alt="">
+            <span>{{ item2.tit }}</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 提交 -->
+  <div style="height: 60px">
+    <van-submit-bar
+      :price="76800"
+      label=" "
+      decimal-length=""
+      @submit="onSubmit"
+    >
+      <div class="sub-bar-left">
+        <img src="../assets/images/housedetail/chat.png" alt="">
+        <span>聊天</span>
+      </div>
+      <template #button>
+        <van-button color="linear-gradient(74deg, #F99020 0%, #FCAC3B 100%)">
+          预订当前房源
+        </van-button>
+      </template>
+    </van-submit-bar>
+  </div>
 
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
 import { Toast } from 'vant';
-import { defineComponent, reactive } from 'vue'
+import { ref, defineComponent, reactive } from 'vue'
+import pic_true from '../assets/images/housedetail/true.png'
+import pic_false from '../assets/images/housedetail/false.png'
 
 const coupon = {
   available: 1,
@@ -221,10 +264,75 @@ const coupon = {
 export default defineComponent ({
   data() {
     return {
-
+      facList: [
+        {
+          title: '基础设施',
+          baseList: [
+            {
+              imgurl: pic_true,
+              tit: '无线网络'
+            },
+            {
+              imgurl: pic_false,
+              tit: '电梯'
+            },
+            {
+              imgurl: pic_true,
+              tit: '窗户'
+            },
+            {
+              imgurl: pic_true,
+              tit: '空调-冷暖'
+            }
+          ]
+        },
+        {
+          title: '卫浴设施',
+          baseList: [
+            {
+              imgurl: pic_true,
+              tit: '热水'
+            },
+            {
+              imgurl: pic_true,
+              tit: '独立卫浴'
+            },
+            {
+              imgurl: pic_true,
+              tit: '电吹风'
+            },
+            {
+              imgurl: pic_true,
+              tit: '洗漱用品'
+            }
+          ],
+        },
+        {
+          title: '厨房设施',
+          baseList: [
+            {
+              imgurl: pic_true,
+              tit: '微波炉'
+            },
+            {
+              imgurl: pic_true,
+              tit: '餐具'
+            },
+            {
+              imgurl: pic_true,
+              tit: '刀具菜板'
+            },
+            {
+              imgurl: pic_true,
+              tit: '烹饪锅具'
+            }
+          ],
+        }
+      ]
     }
   },
   setup() {
+    // 轮播
     const current = ref(0);
     const show = ref(false);
 
@@ -232,19 +340,65 @@ export default defineComponent ({
       current.value = index;
     };
 
+    // 优惠券
     const state = reactive({
       coupons: [coupon],
       showList: false,
       chosenCoupon: -1
     });
 
-    const listChange = (index) => {
-      state.showList = false;
-      state.chosenCoupon = index;
+    // 预订
+    const onSubmit = () => {
+      Toast('预订成功');
     };
 
-    const onExchange = (code) => {
-      state.coupons.push(coupon);
+    // 日期选择
+    const date = ref('');
+    const showTime = ref(false);
+
+    const formatDate = (date) => `${date.getMonth() + 1}/${date.getDate()}`;
+    const onConfirm = (values) => {
+      const [start, end] = values;
+      showTime.value = false;
+      date.value = `${formatDate(start)} - ${formatDate(end)}`;
+    };
+
+    const formatter = (day) => {
+      const month = day.date.getMonth() + 1;
+      const date = day.date.getDate();
+      const d = new Date();
+
+      if (date === d.getDate()) {
+        day.text = '今天';
+      }
+
+      if (month === 12) {
+        if (date === 7) {
+          day.topInfo = '大雪';
+        } else if (date === 25) {
+          day.topInfo = '圣诞节';
+        }
+      }
+
+      if (month === 1) {
+        if (date === 1) {
+          day.topInfo = '元旦';
+        } else if (date === 5) {
+          day.topInfo = '小寒';
+        } else if (date === 13) {
+          day.topInfo = '腊月';
+        } else if (date === 20) {
+          day.topInfo = '大寒';
+        }
+      }
+
+      if (day.type === 'start') {
+        day.bottomInfo = '入住';
+      } else if (day.type === 'end') {
+        day.bottomInfo = '离店';
+      }
+
+      return day;
     };
 
     return {
@@ -252,9 +406,11 @@ export default defineComponent ({
       onChange,
       show,
       state,
-      listChange,
-      onExchange,
-      disabledCoupons: [coupon]
+      onSubmit,
+      date,
+      showTime,
+      onConfirm,
+      formatter
     };
   }
 })
@@ -341,6 +497,15 @@ export default defineComponent ({
   .content {
     background: #fff;
     border-radius: 8px;
+    li {
+      .van-tag {
+        margin-bottom: 3px;
+      }
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
 // 点评、地图
@@ -430,6 +595,18 @@ export default defineComponent ({
       right: 4px;
       border: 1px solid #F3221F;
     }
+    .van-tab {
+      justify-content: start;
+      padding: 0 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .van-tabs__line {
+      display: none;
+    }
+    .van-tab:last-child {
+      display: none;
+    }
   }
   // 日期
   .day .van-cell__title {
@@ -498,17 +675,19 @@ export default defineComponent ({
       .price {
         font-size: 14px;
         font-weight: bold;
+        color: #EA8D16;
       }
       .prices {
         font-size: 12px;
         font-weight: normal;
+        color: #9B9B9B;
       }
     }
     .van-button--mini {
       height: 28px;
       padding: 0 15px;
-      background: orange;
-      border-radius: 2px;
+      background: #EA8D16;
+      border-radius: 4px;
       color: #fff;
     }
   }
@@ -606,14 +785,72 @@ h2 {
   ul {
     background: #F7F8FA;
     border-radius: 2px;
+    padding-bottom: 24px;
     li {
+      height: 50px;
       padding-left: 15px;
       display: flex;
       align-items: flex-end;
       div {
+        width: 105px;
+        font-weight: bold;
+        color: #373737;
+        font-size: 12px;
+      }
+    }
+    .fac-right {
+      width: 220px;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      div {
         width: 110px;
+        display: flex;
+        align-items: center;
+        color: #6D6D6E;
+      }
+      img {
+        width: 22px;
       }
     }
   }
+}
+
+// 提交
+.van-submit-bar__bar {
+  height: 60px;
+  .sub-bar-left {
+    width: 60px;
+    height: 43px;
+    border-right: 1px solid #F7F7F7;
+    margin-right: 13px;
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 22px;
+    }
+    span {
+      font-size: 12px;
+      font-weight: bold;
+      color: #4D4D4D;
+    }
+  }
+  .van-submit-bar__text {
+    text-align: left;
+  }
+  .van-submit-bar__price, .van-submit-bar__price-integer {
+    font-size: 16px;
+    font-weight: bold;
+    color: #EA8D16;
+  }
+  .van-button {
+    height: 100%;
+    padding: 0 23px;
+    .van-button__text {
+      font-size: 19px;
+      font-weight: bold;
+    }
+  }
+
 }
 </style>
