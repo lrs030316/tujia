@@ -5,10 +5,8 @@
 
       <!-- 登录注册入口 -->
       <div class="nc">
-        <span>注册/登录</span>
-        <a href="">
-          <img src="../assets/image/mineimg/sz.png" alt="">
-        </a>
+        <div @click="goToRegister" class="zc">注册/登录</div>
+        <img src="../assets/image/mineimg/sz.png" alt="">
       </div>
 
       <div class="mine">
@@ -153,7 +151,11 @@ export default {
 
   mounted () { },
 
-  methods: {}
+  methods: {
+    goToRegister() {
+      this.$router.push("/register")
+    }
+  }
 };
 </script>
 
@@ -168,7 +170,7 @@ export default {
   }
 }
 .nc {
-  width: 319px;
+  width: 100%;
   height: 20px;
   position: absolute;
   top: 46px;
@@ -176,18 +178,14 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  span {
+  .zc {
     color: #fff;
     font-size: 18px;
     letter-spacing: 1px;
-  }
-  a {
+  }  
+  img {
     width: 20px;
     height: 20px;
-    img {
-      width: 100%;
-      height: 100%;
-    }
   }
 }
 
@@ -256,6 +254,7 @@ export default {
   position: absolute;
   top: 127px;
   left: 19px;
+  // background: cornflowerblue;
   img {
     width: 100%;
     height: 100%;
