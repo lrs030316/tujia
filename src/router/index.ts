@@ -100,7 +100,7 @@ const routes =[
   { path: '/findditail',
     component:() => import('../views/FindDitail.vue')
   },
-  { path: '/housedetail',
+  { path: '/housedetail/:houseId',
     component:() => import('../views/HouseDetail.vue')
   },
   { path: '/mouse',

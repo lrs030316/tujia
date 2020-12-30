@@ -9,7 +9,7 @@
        <img src="../assets/syimg/wh1.png" alt="">
      </div>
      <div class="ds-2">
-       <div class="ds-2-1">
+       <div class="ds-2-1" v-for="(item, index) in houseList" :key="index">
           <span class="count item">住入惊喜夜</span>
          <img src="../assets/syimg/wh2.png" alt="">
        </div>
