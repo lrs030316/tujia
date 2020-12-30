@@ -3,6 +3,7 @@
     <div class="rank">
       <img
         class="cup"
+        src="http://10.31.162.42:4000/indexdetail/cup.png"
         alt=""
       />
       <span>{{ item.img_rank }}</span>
@@ -14,6 +15,7 @@
       <div class="out_heart" @click="like">
         <img
           class="heart"
+          src="http://10.31.162.42:4000/indexdetail/heart.png"
           alt=""
         />
         <p class="count">
@@ -24,6 +26,7 @@
         <img
           @click="com"
           class="information"
+          src="http://10.31.162.42:4000/indexdetail/information.png"
           alt=""
         />
         <p class="comment">
@@ -89,10 +92,10 @@ export default {
     const store = useStore();
 
     onMounted(() => {
-      store.dispatch("getIndexData");
+      store.dispatch("getHouseData");
     });
 
-    const indexData = computed(() => store.state.IndexDetail.IndexDetailList);
+    const indexData = computed(() => store.state.HouseDetail.HouseDetailList);
     return {
       count,
       like,
