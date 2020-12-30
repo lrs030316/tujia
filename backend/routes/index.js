@@ -18,6 +18,25 @@ router.get("/sylbt",function(req,res,next){
         throw err
       }else{
         obj.status=0;
+        obj.result =results ;
+      }
+      res.json(obj);
+  })
+});
+
+
+router.get("/Fwxqfyb",function(req,res,next){
+  let sqlSearch = `select * from fwxqfyb`;
+  console.log(1111);
+  conn.query(sqlSearch, (err, results) => {
+      let obj = {
+        status:1
+      }
+      if (err) {
+        obj.msg = "失败"
+        throw err
+      }else{
+        obj.status=0;
         obj.result = results;
       }
       res.json(obj);
