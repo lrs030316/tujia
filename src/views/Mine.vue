@@ -1,10 +1,11 @@
 <template>
- <div>
+  <div>
     <div class="top">
       <img src="../assets/image/mineimg/topbg.png" alt="">
 
+      <!-- 登录注册入口 -->
       <div class="nc">
-        <span>遇见温柔风.</span>
+        <span>注册/登录</span>
         <a href="">
           <img src="../assets/image/mineimg/sz.png" alt="">
         </a>
@@ -25,10 +26,11 @@
         <img src="../assets/image/mineimg/bj.png" alt="">
       </div>
 
+      <!-- 头像 -->
       <div class="tx">
         <img src="../assets/image/mineimg/tx.png" alt="">
       </div>
-      
+
       <ul class="hb">
         <li>
           <a href="">红包</a>
@@ -43,26 +45,115 @@
           <span>￥0</span>
         </li>
       </ul>
+
+      <div class="dd">
+        <span>我的订单</span>
+        <a href="">
+          查看全部
+          <van-icon name="arrow" color="#707070" />
+        </a>
+      </div>
     </div>
-    
-   
-   <div class="lbt"></div>
- </div>
+
+    <div class="lbt">
+      <img src="../assets/image/mineimg/banner.png" alt="">
+    </div>
+
+    <div class="testbig">
+      <div class="test" v-for="(value,index) in tabs" :key="index">
+        <van-grid :border="false" :column-num="3" >
+          <van-grid-item :to="value.path">
+            <img :src="value.img" alt="" style="width:30px;height:30px;">
+          </van-grid-item>
+          <span class="big">{{value.name}}</span>
+          <span class="small" v-if="value.small">
+            {{ value.small }}
+          </span>
+        </van-grid>
+      </div>
+    </div>
+  
+    <van-button class="zq" type="primary" size="large" round>我想当房东赚钱</van-button>
+  </div>
 </template>
 
 <script>
 export default {
- data() {
-   return {};
- },
 
- components: {},
+  data () {
+    return {
+      tabs: [
+        {
+          img: 'http://10.31.162.29:4000/mine/content.png',
+          name: '内容管理',
+          small: '途中故事',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/see.png',
+          name: '浏览历史',
+          small: '   ',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/info.png',
+          name: '常用信息',
+          small: '入住人/地址',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/money.png',
+          name: '开具发票',
+          small: '历史发票',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/invite.png',
+          name: '邀请好友',
+          small: '邀请好友得奖励',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/online.png',
+          name: '在线客服',
+          small: '24H服务',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/card.png',
+          name: '卡包',
+          small: '途游卡',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/safe.png',
+          name: '安全中心',
+          small: '    ',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/manage.png',
+          name: '托管加盟',
+          small: '房屋托管经营',
+          path: '/commoninfo'
+        },
+        {
+          img: 'http://10.31.162.29:4000/mine/advice.png',
+          name: '意见反馈',
+          small: '    ',
+          path: '/commoninfo'
+        }
+      ]
+    };
+  },
 
- computed: {},
+  components: {},
 
- mounted() {},
+  computed: {},
 
- methods: {}
+  mounted () { },
+
+  methods: {}
 };
 </script>
 
@@ -71,7 +162,7 @@ export default {
   width: 100%;
   height: 251px;
   position: relative;
-  img{
+  img {
     width: 100%;
     height: 73%;
   }
@@ -90,7 +181,7 @@ export default {
     font-size: 18px;
     letter-spacing: 1px;
   }
-  a{
+  a {
     width: 20px;
     height: 20px;
     img {
@@ -100,10 +191,10 @@ export default {
   }
 }
 
-.mine{
+.mine {
   width: 80px;
   height: 18px;
-  background: rgba(255, 255, 255,0.3);
+  background: rgba(255, 255, 255, 0.3);
   border: none;
   border-radius: 9px;
   position: absolute;
@@ -113,7 +204,7 @@ export default {
   justify-content: center;
   align-items: center;
   color: #fff;
-  img{
+  img {
     margin-left: 8px;
     width: 12px;
     height: 15px;
@@ -143,9 +234,9 @@ export default {
 .bj {
   width: 50px;
   height: 50px;
-  background: #6B7075;
+  background: #6b7075;
   border-radius: 50%;
-  box-shadow:0 0 10px 5px rgba(0, 0, 0,0.3);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 86px;
   right: 13px;
@@ -161,7 +252,7 @@ export default {
   width: 74px;
   height: 74px;
   border-radius: 50%;
-  box-shadow:0 0 20px 5px rgba(0, 0, 0,0.3);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 127px;
   left: 19px;
@@ -181,8 +272,6 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // font-family: PingFang-SC-Bold;
-  // font-weight: bold;
   li {
     display: flex;
     flex-direction: column;
@@ -191,9 +280,9 @@ export default {
       color: #666666;
       font-size: 12px;
       margin-bottom: 8px;
-      // font-weight: bold;
     }
     span {
+
       font-family: PingFang-SC-Bold;
       font-size: 14px;
       color: #000;
@@ -202,11 +291,89 @@ export default {
     }
   }
 }
-
+.dd {
+  width: 337px;
+  height: 16px;
+  position: absolute;
+  bottom: 10px;
+  padding: 0 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: PingFang-SC-Bold;
+  span {
+    font-size: 16px;
+    font-weight: Bold;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666666;
+  }
+}
 
 .lbt {
   width: 100%;
   height: 88px;
-  background:rgb(161, 13, 13);
+  background: #f7f8fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 340px;
+    height: 63px;
+  }
+}
+
+.testbig {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  flex-wrap: wrap;
+  margin: 0;
+  .test {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .van-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .van-grid-item {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 8px;
+        margin-top: 10px;
+      }
+      .big {
+        font-size: 12px;
+        color: #303030;
+      }
+      .small {
+        text-align: center;
+        width: 70px;
+        height: 10px;
+        font-size: 10px;
+        color: #999999;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+
+ 
+
+.zq {
+  width: 245px;
+  height: 38px;
+  margin-left: 64px;
+  color: #434343;
+  font-size: 14px;
+  background: #f4f5f7;
+  border: none;
 }
 </style>

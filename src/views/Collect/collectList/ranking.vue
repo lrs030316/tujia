@@ -1,9 +1,9 @@
 <template>
   <van-empty 
-    description="榜单页面" 
+    description="暂无收藏" 
     class="custom-image"
-    image="https://img.yzcdn.cn/vant/custom-empty-image.png">
-    <van-button round type="danger" class="bottom-button">按钮</van-button>
+    image="../../../assets/imgers/Collect/empty.png">
+    <van-button round type="danger" class="bottom-button">随便逛逛</van-button>
   </van-empty>
 </template>
 
@@ -21,5 +21,6 @@ export default {
   .bottom-button {
     width: 160px;
     height: 40px;
+    background: orangered;
   }
 </style>

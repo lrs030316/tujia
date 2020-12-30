@@ -7,27 +7,27 @@
        <span class="day count">天天特惠</span>
        <span class="reserve house">特惠房源抢先订</span>
        <span class="discount pre">6折起</span>
-       <img src="../../syimg/ds1.png" alt="">
+       <img src="../assets/syimg/ds1.png" alt="">
        </div>
      <div class="ds-2">
        <i class="ds-2-1">
           <span class="day down">新手立减</span>
           <span class="reserve newp">新手专属特惠房源</span>
           <span class="discount fto">6折起</span>
-         <img src="../../syimg/ds2.png" alt=""></i>
+         <img src="../assets/syimg/ds2.png" alt=""></i>
        <i class="ds-2-2">
           
         <div class="ds-2-2-1 disdance">
            <span class="day ">今日甩卖</span>
            <span class="reserve ">预定今晚</span>
            <span class="discount ">6折起</span>
-           <img src="../../syimg/ds3.png" alt="">
+           <img src="../assets/syimg/ds3.png" alt="">
         </div>
         <div class="ds-2-2-1">
            <span class="day">新房特惠</span>
            <span class="reserve">抢先体验</span>
            <span class="discount">6折起</span>
-           <img src="../../syimg/ds4.png" alt="">
+           <img src="../assets/syimg/ds4.png" alt="">
          </div>
        </i>
     </div>
@@ -46,9 +46,9 @@ export default {
 .wrapp {
   padding:0 17px ;
   background: #fff;
+  width: 100%;
   .mate {
     width: 84px;
-    height: 20px;
     font-size: 21px;
     font-family: PingFang SC;
     font-weight: bold;
@@ -57,7 +57,6 @@ export default {
 
   }
   .sm-mate {
-    height: 11px;
     font-size: 11px;
     font-family: PingFang SC;
     font-weight: 500;
@@ -66,12 +65,13 @@ export default {
 
   }
   .discount {
+    width: 100%;
     height: 155px;
-    background: yellowgreen;
     display: flex;
     justify-content: space-around;
     align-items: center;
     .ds-1{
+      width: 174px;
        position: relative;
       .day {
         width: 72px;
@@ -122,18 +122,20 @@ export default {
       
 
     
-    >img {
-      width: 165px;
-      height: 100%;
-      margin-right: 9px;
-     }
+      >img {
+        width: 165px;
+        height: 100%;
+        margin-right: 9px;
+      }
     }
     .ds-2{
+      width: 167px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
          .ds-2-1{
+           width: 100%;
            position: relative;
            .down {
                 position: absolute;
@@ -180,6 +182,7 @@ export default {
               }
          
          >img {
+           width: 100%;
              height: 75px;
           }
         }
@@ -190,6 +193,7 @@ export default {
             margin-top: 8px;
               
           >.ds-2-2-1{
+            width: 80px;
              position: relative;
              .day {
                 position: absolute;
@@ -223,6 +227,7 @@ export default {
                 border-radius: 5px;
               }
             >img{
+              width: 100%;
               height: 70px;
            } 
           }
