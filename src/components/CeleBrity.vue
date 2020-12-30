@@ -9,7 +9,7 @@
        <img src="../assets/syimg/wh1.png" alt="">
      </div>
      <div class="ds-2">
-       <div class="ds-2-1" v-for="(item, index) in houseList" :key="index">
+       <div class="ds-2-1" @click="goToDetail(houseid)">
           <span class="count item">住入惊喜夜</span>
          <img src="../assets/syimg/wh2.png" alt="">
        </div>
@@ -32,9 +32,25 @@
 
 <script>
 export default {
- data() {
-   return {};
- }
+  data() {
+    return {
+      houseid: Number
+    };
+  },
+  methods: {
+    goToDetail(id) {
+      this.$router.push({ name: "detail", params: { houseId: id } });
+    }
+  },
+    mounted() {
+    fetch("https://www.fastmock.site/mock/56ac486d6b6a55c0e64980b06dbd0f0b/tujia/house/details")
+      .then(response => response.json())
+      .then(res => {
+        if (res.status === 0) {
+          this.houseid = res.result[0]._id;
+        }
+      })
+  },
 };
 </script>
 <style lang='less' scoped>

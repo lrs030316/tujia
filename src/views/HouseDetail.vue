@@ -11,7 +11,7 @@
     </van-swipe>
     <!-- 收藏、下载、评论 -->
     <div class="lunbo-top">
-      <div class="lunbo-top-left">
+      <div class="lunbo-top-left" @click="goBack">
           <img src="../assets/images/housedetail/arrow-left.png" alt="">
       </div>
       <div class="lunbo-top-right">
@@ -134,28 +134,25 @@
         <span class="custom-title">{{ type }}</span>
         <van-icon name="arrow" /> 
       </template>
-      <template #desc v-for="item in tipList" :key="item">
-        <div class="describe">{{ item }}</div>
+      <template #desc>
+        <div class="describe" v-for="item in tipList" :key="item">{{ item }}</div>
       </template>
       <template #tags>
         <div class="icon">
-          <van-icon name="warning" color="#B4B4B4"/>
-          <span>啊啊啊啊啊啊啊啊啊啊啊</span>
-          <van-icon name="warning" color="#B4B4B4"/>
-          <span>啊啊啊啊</span>
-          <van-icon name="warning" color="#B4B4B4"/>
-          <span>啊啊啊啊啊啊啊啊啊啊啊</span>
+          <van-icon name="warning" color="#B4B4B4" v-for="item in remindList" :key="item">
+            <span>{{ item }}</span>
+          </van-icon>
         </div>
         
       </template>
       <template #bottom>
         <div class="card-left">
           <van-icon name="warning" color="#FE5E5E"/>
-          <span>啊啊啊啊啊啊啊</span>
+          <span>{{ red_remind }}</span>
         </div>
         <div class="card-right">
           <span class="price">
-            ¥ 950<span class="prices">/晚</span>
+            {{ price }}<span class="prices">/晚</span>
           </span>
           <van-button size="mini">预订</van-button>
         </div>
@@ -215,7 +212,7 @@
   <!-- 提交 -->
   <div style="height: 60px">
     <van-submit-bar
-      :price="76800"
+      :price="36700"
       label=" "
       decimal-length=""
       @submit="onSubmit"
@@ -253,6 +250,9 @@ const coupon = {
 };
 
 export default defineComponent ({
+  props: {
+    
+  },
   data() {
     return {
       facList: [
@@ -329,7 +329,10 @@ export default defineComponent ({
       site: String,
       address: String,
       type: String,
-      tipList: []
+      tipList: [],
+      remindList: [],
+      red_remind: String,
+      price: String
     }
   },
   mounted() {
@@ -347,6 +350,9 @@ export default defineComponent ({
           this.address = res.result[0].address;
           this.type = res.result[0].type;
           this.tipList = res.result[0].tip;
+          this.remindList = res.result[0].remind;
+          this.red_remind = res.result[0].red_remind;
+          this.price = res.result[0].price;
         }
       })
   },
@@ -431,6 +437,11 @@ export default defineComponent ({
       onConfirm,
       formatter
     };
+  },
+  methods: {
+    goBack() {
+      this.$router.go(-1);
+    }
   }
 })
 </script>

@@ -101,6 +101,7 @@ const routes =[
     component:() => import('../views/FindDitail.vue')
   },
   { path: '/housedetail/:houseId',
+    name: "detail",
     component:() => import('../views/HouseDetail.vue')
   },
   { path: '/mouse',
