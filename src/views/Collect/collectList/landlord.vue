@@ -22,18 +22,23 @@
       <h3>热门房源</h3>
       <span>(北京)</span>
     </div>
-    
+    <swipe-loader />
   </main>
   
 </template>
 
 <script >
-import imgUre from "../../../assets/imgers/Collect/Head portrait-1.png";
+import imgUre from '../../../assets/imgers/Collect/Headportrait-1.png';
+// import imgUre from "../../../assets/imgers/Collect/Head portrait-1.png";
+import swipeLoader from "../../../components/SwipeLoader.vue";
 export default {
   data() {
     return{
       imgUre:imgUre
     }
+  },
+  components: {
+    swipeLoader
   }
 }
 </script>

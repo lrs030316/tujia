@@ -1,3 +1,14 @@
+// import { createStore } from 'vuex'
+// import IndexDetail from './IndexDetail'
+import HouseDetail from './HouseDetail'
+import HistoryDatail from './HistoryDetail'
+import LoaderDatail from './LoaderDetail'
+
+// create new store instance
+// const store = createStore({
+//   modules: {
+   
+//   }
  
  import { createStore } from 'vuex'
  import IndexDetail from './IndexDetail'
@@ -13,8 +24,10 @@
     cityId:300100 }
    },
    modules: {  
-     IndexDetail
-    //  HouseDetail 
+    IndexDetail,
+    HouseDetail,
+    HistoryDatail,
+    LoaderDatail
    },
    mutations: {
     changeCity(state,payload){

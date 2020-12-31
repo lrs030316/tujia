@@ -1,19 +1,19 @@
 <template>
-  <div class="list">
-    <img class="list-img" :src="imgUrp" alt="">
+  <div class="findlist" v-for="item in selectlistData" :key="item">
+    <img class="list-img" :src="item.imgurl" alt="">
     <div class="list-1">
       <img :src="imgUrl" alt="">
-      <span>江郎山风景区</span>
+      <span>{{ item.diqu }}</span>
     </div>
     <div class="list-2">
-      <img class="img-1" :src="imgUra" alt="" ><span>江浙沪周边游<img :src="imgUrb" alt="">绝美小众景点</span>
+      <span>{{ item.title }}</span>
     </div>
     <div class="list-3">
       <img class="list-3img" :src="imgUrc" alt="">
-      <span class="list-3text">Dyxn6636</span>
+      <span class="list-3text">{{item.nc}}</span>
       <div class="praise">
         <img class="praiseimg" :src="imgUrd" alt="">
-        <span class="praisespan">162</span>
+        <span class="praisespan">{{ item.dz }}</span>
       </div>
     </div>
   </div>
@@ -23,10 +23,9 @@
 
 import imgUrp from "../../../assets/imgers/Find/find-img.png";
 import imgUrl from "../../../assets/imgers/Find/location.png";
-import imgUra from "../../../assets/imgers/Find/logo-1.png";
-import imgUrb from "../../../assets/imgers/Find/logo-2.png";
 import imgUrc from "../../../assets/imgers/Find/logo.png";
 import imgUrd from "../../../assets/imgers/Find/dianzan.png";
+import {selectlist} from "../../../utils/api";
 
 export default {
   data() {
@@ -34,24 +33,35 @@ export default {
       // 引用图片
       imgUrp:imgUrp,
       imgUrl:imgUrl,
-      imgUra:imgUra,
-      imgUrb:imgUrb,
       imgUrc:imgUrc,
       imgUrd:imgUrd,
+      selectlistData: []
     }
-    
+  },
+  mounted() {
+    this.getselectlistData();
+  },
+  methods: {
+    async getselectlistData() {
+      const res = await selectlist();
+      this.selectlistData = res.result;
+      console.log(this.selectlistData);
+    }
   }
 }
 </script>
 
 <style lang="less" scoped>
-  .list {
+// @import "../../../../assets/less/find.less";
+  .findlist {
     display: flex;
     flex-direction: column;
+    float: left;
     width: 163px;
     height: 230px;
     margin-left: 19px;
     border: 1px solid #ccc;
+    margin-top: 10px;
     .list-img{
       width: 100%;
       height: 122px;
@@ -80,10 +90,6 @@ export default {
         
       }  
     }
-    .list-2 img{
-      width: 12px;
-      height: 12px;
-    }
     .list-3{
       display: flex;
       flex-direction:row;
@@ -111,17 +117,19 @@ export default {
       width: 37px;
       height: 22px;
       margin-left: 39px;
+      margin-right: 9px;
     }
     .praise .praiseimg{
       width: 22px;
       height: 22px;
     }
     .praise .praisespan{
-      // float: left;
+      float: right;
+      font-size: 6px;
       width: 10px;
       height: 7px;
-      margin-bottom: 9px;
-      font-size: 2px;
+      margin-top: 3px;
+      
     }
   }
   

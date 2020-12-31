@@ -44,7 +44,7 @@ export default {
 //    handlexq() {
 //      this.$router.push("/housedetail");
 //    }
- }
+//  }
 };
 </script>
 <style lang='less' scoped>
