@@ -12,8 +12,16 @@
 </template>
 
 <script>
-export default {
+import { useRouter } from 'vue-router';
 
+export default {
+  setup() {
+    const router = useRouter();
+    const xx = () =>{
+     router.push("/select")
+   }
+   return { xx }
+  }
 }
 </script>
 

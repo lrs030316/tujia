@@ -2,7 +2,7 @@
   <div class="findhead">
     <div class="findhead1">
       <h2>发现</h2>
-      <div class="anniu">全部城市</div>
+      <div class="anniu" @click="findcountry">全部城市</div>
       <img src="../../assets/imgers/Find/stop.png" alt="">
     </div>
     <img class="findhead2" src="../../assets/imgers/Find/find.png" alt="">

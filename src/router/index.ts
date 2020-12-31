@@ -56,6 +56,10 @@ const routes =[
           }
         ]
       },
+      {
+        path: "/Findcountry",
+        component: () => import("../views/Find/FindList/Findcountry.vue")
+      },
       { 
         path: "/select",
         component: () => import("../views/Find/Index.vue"),

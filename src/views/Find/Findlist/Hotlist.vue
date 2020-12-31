@@ -10,7 +10,7 @@
     </div>
     <div class="list-3">
       <img class="list-3img" :src="imgUrc" alt="">
-      <span class="list-3text">{{item.nc}}</span>
+      <span class="list-3text">abcd</span>
       <div class="praise">
         <img class="praiseimg" :src="imgUrd" alt="">
         <span class="praisespan">{{ item.dz }}</span>
