@@ -17,7 +17,7 @@
          <img src="../assets/syimg/ds2.png" alt=""></i>
        <i class="ds-2-2">
           
-        <div class="ds-2-2-1 disdance">
+        <div  class="ds-2-2-1 disdance">
            <span class="day ">今日甩卖</span>
            <span class="reserve ">预定今晚</span>
            <span class="discount ">6折起</span>
@@ -39,6 +39,11 @@
 export default {
  data() {
    return {};
+  }
+//  methods:{
+//    handlexq() {
+//      this.$router.push("/housedetail");
+//    }
  }
 };
 </script>
@@ -48,6 +53,7 @@ export default {
   background: #fff;
   width: 100%;
   .mate {
+    margin: 20px 0;
     width: 84px;
     font-size: 21px;
     font-family: PingFang SC;
@@ -57,6 +63,7 @@ export default {
 
   }
   .sm-mate {
+    margin-bottom: 10px;
     font-size: 11px;
     font-family: PingFang SC;
     font-weight: 500;

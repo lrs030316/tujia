@@ -12,7 +12,7 @@
     </van-swipe>
     <!-- 收藏、下载、评论 -->
     <div class="lunbo-top">
-      <div class="lunbo-top-left">
+      <div @click="houseback" class="lunbo-top-left">
           <img src="../assets/images/housedetail/arrow-left.png" alt="">
       </div>
       <div class="lunbo-top-right">
@@ -412,6 +412,11 @@ export default defineComponent ({
       onConfirm,
       formatter
     };
+  },
+  methods:{
+    houseback() {
+      this.$router.go(-1);
+    }
   }
 })
 </script>
