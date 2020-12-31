@@ -4,7 +4,7 @@
       <a href="">
         <img src="../assets/image/loginimg/gb.png" alt="">
       </a>
-      <span>登录</span>
+      <span @click="goToLogin">登录</span>
     </div>
     <div class="zcbt">
       <span>注册途家</span>
@@ -19,26 +19,43 @@
         <span>+ 86</span>
         <img src="../assets/image/loginimg/sjh.png" alt="">
       </a>
-      <input type="tel" placeholder="输入手机号"  />
+      <input class="tel" type="tel" placeholder="输入手机号" v-model="telValue" />
+      <input class="pas" type="password" placeholder="输入密码" />
     </div>
-    
-    <van-button class="fsyzm" type="primary" size="large">发送验证码</van-button><br/>
+
+    <van-button
+    class="fsyzm"
+    type="primary"
+    size="large"
+    @click="goToLogin"
+    :color="colorChange"
+    >注册</van-button><br />
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {};
+  data () {
+    return {
+      telValue: ''
+    };
   },
 
-  components: {},
+  computed: {
+    colorChange() {
+      if(this.telValue) {
+        return '#fcaf3f'
+      } else {
+        return '#d9d9d9'
+      }
+    }
+  },
 
-  computed: {},
-
-  mounted() {},
-
-  methods: {}
+  methods: {
+    goToLogin () {
+      this.$router.push("/login");
+    }
+  }
 };
 </script>
 
@@ -66,9 +83,9 @@ export default {
   }
 }
 .zcbt {
-  width: 116px;
+  width: 150px;
   height: 30px;
-  border-left: 3px solid #F09B56;
+  border-left: 3px solid #f09b56;
   margin-top: 54px;
   padding-left: 18px;
   display: flex;
@@ -83,7 +100,7 @@ export default {
   margin-left: 20px;
   margin-top: 13px;
   font-size: 12px;
-  color: #9C9C9C;
+  color: #9c9c9c;
   margin-right: 26px;
   span {
     color: #000;
@@ -92,11 +109,10 @@ export default {
 
 .sjh {
   width: 339px;
-  height: 30px;
-  border-bottom: 1px solid #D9D9D9;
-  margin:  0 18px;
+  margin: 0 18px;
   margin-top: 39px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   a {
@@ -125,6 +141,13 @@ export default {
     border: none;
     font-size: 20px;
     margin-right: 40px;
+    border-bottom: 1px solid #d9d9d9;
+    &:nth-of-type(1) {
+      margin-bottom: 20px;
+    }
+    &:nth-of-type(2) {
+      margin-left: 70px;
+    }
   }
 }
 .fsyzm {
@@ -132,13 +155,11 @@ export default {
   width: 303px;
   height: 44px;
   margin-left: 36px;
-  background: #D9D9D9;
   border-radius: 5px;
   color: #fff;
   font-size: 18px;
   border: none;
 }
-
 </style>
 
 

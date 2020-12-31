@@ -16,10 +16,16 @@
         <span>+ 86</span>
         <img src="../assets/image/loginimg/sjh.png" alt="">
       </a>
-      <input type="tel" placeholder="输入手机号"  />
+      <input type="tel" placeholder="输入手机号" v-model="telValue" />
     </div>
     
-    <van-button class="fsyzm" type="primary" size="large">发送验证码</van-button><br/>
+    <van-button
+    class="fsyzm"
+    type="primary"
+    size="large"
+    :color="colorChange"
+    @click="gotToIndex"
+    >本机号一键登录</van-button><br/>
 
     <div class="zhmm">
       <a href="">账号密码登录</a>
@@ -56,16 +62,30 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      telValue: ''
+    };
   },
 
   components: {},
 
-  computed: {},
+  computed: {
+    colorChange() {
+      if(this.telValue) {
+        return '#fcaf3f'
+      } else {
+        return '#d9d9d9'
+      }
+    }
+  },
 
   mounted() {},
 
-  methods: {}
+  methods: {
+    gotToIndex() {
+      this.$router.push("/index");
+    }
+  }
 };
 </script>
 
@@ -97,7 +117,7 @@ export default {
 }
 
 .dl {
-  width: 116px;
+  width: 150px;
   height: 30px;
   border-left: 3px solid #F09B56;
   margin-top: 54px;

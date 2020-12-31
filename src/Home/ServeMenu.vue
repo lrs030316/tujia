@@ -13,7 +13,7 @@
           :key="index"
           >
           <img :src="item.imgUrl" alt="">
-          <span>{{ item.nam}}</span>
+          <span>{{ item.nam }}</span>
           </li>
         </ul>
       </div>
