@@ -153,7 +153,11 @@ export default {
 
   mounted () { },
 
-  methods: {}
+  methods: {
+    loho() {
+
+    }
+  }
 };
 </script>
 

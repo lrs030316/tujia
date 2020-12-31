@@ -62,7 +62,7 @@ setup() {
      
    },
    search() {
-     this.$router.push("/housedetail");
+     this.$router.push("/indexdetail");
    }
  }
 };
