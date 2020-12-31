@@ -11,11 +11,7 @@
     </van-swipe>
     <!-- 收藏、下载、评论 -->
     <div class="lunbo-top">
-<<<<<<< HEAD
-      <div @click="houseback" class="lunbo-top-left">
-=======
       <div class="lunbo-top-left" @click="goBack">
->>>>>>> zzplus
           <img src="../assets/images/housedetail/arrow-left.png" alt="">
       </div>
       <div class="lunbo-top-right">
@@ -442,13 +438,8 @@ export default defineComponent ({
       formatter
     };
   },
-<<<<<<< HEAD
-  methods:{
-    houseback() {
-=======
   methods: {
     goBack() {
->>>>>>> zzplus
       this.$router.go(-1);
     }
   }

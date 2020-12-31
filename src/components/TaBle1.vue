@@ -19,7 +19,7 @@
       <p class="search ms">关键字/位置/民宿名</p>
       <p class="search"><span>天安门广场</span><span>天安门/王府井地区</span><span>朝阳区</span></p>
       <p class="search"><span>后海/南铜锣巷地区</span><span>三里屯</span><span>故宫</span><span>海淀区</span></p>
-      <div class="search-button">开始搜索</div>
+      <div @click="search" class="search-button">开始搜索</div>
       </div>
       <div class="serves"><i><img src="../assets/syimg/sy3.png" alt=""></i><p>信用住.先住后付</p><i><img src="../assets/syimg/fy.png" alt=""></i><p>24小时客服</p><i><img src="../assets/syimg/kf.png" alt=""></i><p>房源房东真实认证</p></div>
       <div class="stage">全国旅游投诉平台:www.12301.cn</div>
@@ -60,6 +60,9 @@ setup() {
    goToCities() {
      this.$router.push("/cities");
      
+   },
+   search() {
+     this.$router.push("/housedetail");
    }
  }
 };

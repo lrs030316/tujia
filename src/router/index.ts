@@ -115,9 +115,9 @@ const routes =[
     path: '/indexdetail',
     component: () => import('../views/IndexDetail.vue')
   },
-  { path: '/:catchAll(.*)',
-    component:() => import('../views/Photograph.vue')
-  },
+  // { path: '/:catchAll(.*)',
+  //   component:() => import('../views/Photograph.vue')
+  // },
   {
     path: '/login',
     component:() => import('../views/Login.vue')
