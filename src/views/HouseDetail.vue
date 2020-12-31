@@ -2,21 +2,24 @@
   <!-- 幻灯片效果 -->
   <div class="lunbo">
     <van-swipe @change="onChange" :height="250">
-      <van-swipe-item>1</van-swipe-item>
-      <van-swipe-item>2</van-swipe-item>
-      <van-swipe-item>3</van-swipe-item>
-      <van-swipe-item>4</van-swipe-item>
+      <van-swipe-item v-for="item in swiperList" :key="item">
+        <img :src="item" alt="">
+      </van-swipe-item>
       <template #indicator>
-        <div class="custom-indicator">{{ current + 1 }}/4</div>
+        <div class="custom-indicator">{{ current + 1 }}/{{ swiperList.length }}</div>
       </template>
     </van-swipe>
     <!-- 收藏、下载、评论 -->
     <div class="lunbo-top">
+<<<<<<< HEAD
       <div @click="houseback" class="lunbo-top-left">
+=======
+      <div class="lunbo-top-left" @click="goBack">
+>>>>>>> zzplus
           <img src="../assets/images/housedetail/arrow-left.png" alt="">
       </div>
       <div class="lunbo-top-right">
-        <van-badge :content="20" color="#fff">
+        <van-badge :content="collect" color="#fff">
           <img src="../assets/images/housedetail/collection.png" alt="">
         </van-badge>
         <img src="../assets/images/housedetail/down.png" alt="">  
@@ -28,44 +31,37 @@
   <!-- 概览内容 -->
   <div class="overview">
     <!-- 标题 -->
-    <h2>[一·巢]毗邻xx街道</h2>
+    <h2>{{ titleH2 }}</h2>
     
     <!-- 标签 -->
     <div class="tag">
       <van-tag
         text-color="#FFC193"
         @click="show = true"
+        v-for="item in tagList"
+        :key="item"
       >
-        优选PRO
+        {{ item }}
       </van-tag>
       <van-action-sheet v-model:show="show" title="标签说明">
         <ul class="content">
-          <li>
-            <van-tag
-              text-color="#FFC193"
-              @click="show = true"
-            >
-              优选PRO
+          <li v-for="item in tagList" :key="item">
+            <van-tag text-color="#FFC193" @click="show = true">
+              {{ item }}
             </van-tag>
             内容
           </li>
-          <li>内容</li>
-          <li>内容</li>
-          <li>内容</li>
-          <li>内容</li>
-          <li>内容</li>
-          <li>内容</li>
         </ul>
       </van-action-sheet>
     </div>
 
     <!-- 点评 -->
-    <van-cell title="5.0超赞" is-link value="22条点评" class="review ov-cell" />
+    <van-cell :title="score" is-link :value="comment+'条点评'" class="review ov-cell" />
 
     <!-- 地图·周边 -->
     <van-cell
-      title="单元格单元格单元格单"
-      label="单元格单元格单元格单元格单元格单元格单元格单元格单元格单元格"
+      :title="site"
+      :label="address"
       value="地图·周边"
       icon="location-o"
       class="map ov-cell"
@@ -139,32 +135,28 @@
         <span>当前房源</span>
       </template>
       <template #title>
-        <span class="custom-title">整套·1居·1床2人·30㎡</span>
+        <span class="custom-title">{{ type }}</span>
         <van-icon name="arrow" /> 
       </template>
       <template #desc>
-        <div class="describe">描述信息</div>
-        <div class="describe">描述信息</div>
+        <div class="describe" v-for="item in tipList" :key="item">{{ item }}</div>
       </template>
       <template #tags>
         <div class="icon">
-          <van-icon name="warning" color="#B4B4B4"/>
-          <span>啊啊啊啊啊啊啊啊啊啊啊</span>
-          <van-icon name="warning" color="#B4B4B4"/>
-          <span>啊啊啊啊</span>
-          <van-icon name="warning" color="#B4B4B4"/>
-          <span>啊啊啊啊啊啊啊啊啊啊啊</span>
+          <van-icon name="warning" color="#B4B4B4" v-for="item in remindList" :key="item">
+            <span>{{ item }}</span>
+          </van-icon>
         </div>
         
       </template>
       <template #bottom>
         <div class="card-left">
           <van-icon name="warning" color="#FE5E5E"/>
-          <span>啊啊啊啊啊啊啊</span>
+          <span>{{ red_remind }}</span>
         </div>
         <div class="card-right">
           <span class="price">
-            ¥ 950<span class="prices">/晚</span>
+            {{ price }}<span class="prices">/晚</span>
           </span>
           <van-button size="mini">预订</van-button>
         </div>
@@ -224,7 +216,7 @@
   <!-- 提交 -->
   <div style="height: 60px">
     <van-submit-bar
-      :price="76800"
+      :price="36700"
       label=" "
       decimal-length=""
       @submit="onSubmit"
@@ -262,6 +254,9 @@ const coupon = {
 };
 
 export default defineComponent ({
+  props: {
+    
+  },
   data() {
     return {
       facList: [
@@ -328,8 +323,42 @@ export default defineComponent ({
             }
           ],
         }
-      ]
+      ],
+      swiperList: [],
+      collect: Number,
+      titleH2: String,
+      tagList: [],
+      score: String,
+      comment: Number,
+      site: String,
+      address: String,
+      type: String,
+      tipList: [],
+      remindList: [],
+      red_remind: String,
+      price: String
     }
+  },
+  mounted() {
+    fetch("https://www.fastmock.site/mock/56ac486d6b6a55c0e64980b06dbd0f0b/tujia/house/details")
+      .then(response => response.json())
+      .then(res => {
+        if (res.status === 0) {
+          this.swiperList = res.result[0].imgurl;
+          this.collect = res.result[0].collect;
+          this.titleH2 = res.result[0].title;
+          this.tagList = res.result[0].tag;
+          this.score = res.result[0].score;
+          this.comment = res.result[0].comment;
+          this.site = res.result[0].site;
+          this.address = res.result[0].address;
+          this.type = res.result[0].type;
+          this.tipList = res.result[0].tip;
+          this.remindList = res.result[0].remind;
+          this.red_remind = res.result[0].red_remind;
+          this.price = res.result[0].price;
+        }
+      })
   },
   setup() {
     // 轮播
@@ -413,8 +442,13 @@ export default defineComponent ({
       formatter
     };
   },
+<<<<<<< HEAD
   methods:{
     houseback() {
+=======
+  methods: {
+    goBack() {
+>>>>>>> zzplus
       this.$router.go(-1);
     }
   }
@@ -428,7 +462,6 @@ export default defineComponent ({
   font-size: 20px;
   line-height: 150px;
   text-align: center;
-  background-color: #39a9ed;
 }
 // 轮播指示器
 .custom-indicator {
